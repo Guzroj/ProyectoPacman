@@ -4,6 +4,7 @@
 #define HEIGHT 702
 #define size_x 21
 #define size_y 19
+//Comentario hecho para probar repositorio
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
