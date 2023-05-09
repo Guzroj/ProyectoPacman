@@ -5,6 +5,7 @@
 #define size_x 21
 #define size_y 19
 //Comentario hecho para probar repositorio
+//Otro comentario solo para probar
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
