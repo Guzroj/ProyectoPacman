@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/Imagenes">
+        <file>Pared.png</file>
+        <file>Pelota.png</file>
+    </qresource>
+</RCC>
