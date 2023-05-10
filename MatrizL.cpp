@@ -21,6 +21,7 @@ int Matriz::veri(std::string le){
 Matriz::~Matriz(){
     delete scene;
     delete view;
+    delete timer_pacman;
     for (int i = 0; i < size_x; i++)
     {
         for (int j = 0; j < size_y; j++)
@@ -58,6 +59,12 @@ void Matriz::creaMapa(){
 void Matriz::lectorLineas(int *map, std::string le){
     for (int i = 0; i < size_y; i++)
         map[i] = le[i] - '0';
+}
+
+void Matriz::corredor(){
+    timer_pacman = new QTimer();
+    QObject::connect(timer_pacman, SIGNAL(timeout()), pacman, SLOT(move()));
+    timer_pacman->start(300);
 }
 
 
@@ -110,5 +117,8 @@ Matriz::Matriz(char *file_name){
     this->setScene(scene);
     creaMapa();
     this->setStyleSheet("background-color:black;");
+    pacman = new PacMan(map_int, map_pix, scene);
+    pacman->setFlag(QGraphicsPixmapItem::ItemIsFocusable);
+    pacman->setFocus();
 
 }

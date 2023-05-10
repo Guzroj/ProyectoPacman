@@ -2,5 +2,9 @@
     <qresource prefix="/Imagenes">
         <file>Pared.png</file>
         <file>Pelota.png</file>
+        <file>Abajo.png</file>
+        <file>Arriba.png</file>
+        <file>Derecha.png</file>
+        <file>Izquierda.png</file>
     </qresource>
 </RCC>

@@ -14,6 +14,7 @@
 #include <QGraphicsView>
 #include <QGraphicsScene>
 #include <QGraphicsPixmapItem>
+#include "Pacman.h"
 
 class Matriz : public QGraphicsView{
 private:
@@ -21,6 +22,8 @@ private:
     QGraphicsView                           *view;
     QGraphicsPixmapItem                     **map_pix;
     int                                     **map_int;
+    PacMan                                  *pacman;
+    QTimer                                  *timer_pacman;
 public:
     Matriz(char *file_name);
     ~Matriz();

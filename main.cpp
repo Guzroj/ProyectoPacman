@@ -25,6 +25,7 @@ int main(int argc, char *argv[])
     loop->setFixedSize(WIDTH, HEIGHT);
     loop->setSceneRect(0, 0, WIDTH, HEIGHT);
     loop->show();
+    loop->corredor();
 
 
     return a.exec();
