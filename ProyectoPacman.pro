@@ -10,6 +10,7 @@ CONFIG += c++17 cmdline
 SOURCES += \
         MatrizL.cpp \
         Pacman.cpp \
+        fantasma.cpp \
         main.cpp
 
 # Default rules for deployment.
@@ -19,7 +20,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     MatrizL.h \
-    Pacman.h
+    Pacman.h \
+    fantasma.h
 
 RESOURCES += \
     Resources.qrc
