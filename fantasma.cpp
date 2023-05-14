@@ -10,7 +10,7 @@ void Fantasma::set_default()
 
 }
 
-void    Fantasma::move_ghost()
+void    Fantasma::move_f()
 {
 
 }

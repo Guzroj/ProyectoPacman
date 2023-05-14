@@ -38,9 +38,9 @@ public:
     int             check_move(int i_pos, int j_pos);
     virtual void    set_default() = 0;
     virtual void    calculate_point() = 0;
-                    Fantasma();
+    Fantasma();
 public slots:
-    virtual void    move_ghost() = 0;
+    virtual void    move_f() = 0;
 };
 
 #endif // FANTASMA_H

@@ -1,8 +1,14 @@
 #include "MatrizL.h"
+#include "FantasmaN.h"
 #define size_x 21
 #define size_y 19
 
-
+/**
+ * @brief Matriz::veri
+ * Se encarga de verificar que exista la matriz
+ * @param le
+ * @return
+ */
 int Matriz::veri(std::string le){
     int i;
 
@@ -22,6 +28,8 @@ Matriz::~Matriz(){
     delete scene;
     delete view;
     delete timer_pacman;
+    delete naranja;
+    delete timer_naranja;
     for (int i = 0; i < size_x; i++)
     {
         for (int j = 0; j < size_y; j++)
@@ -63,8 +71,11 @@ void Matriz::lectorLineas(int *map, std::string le){
 
 void Matriz::corredor(){
     timer_pacman = new QTimer();
+    timer_naranja = new QTimer();
     QObject::connect(timer_pacman, SIGNAL(timeout()), pacman, SLOT(move()));
+    QObject::connect(timer_naranja, SIGNAL(timeout()), naranja, SLOT(move_f()));
     timer_pacman->start(300);
+    timer_naranja->start(300);
 }
 
 
@@ -120,5 +131,6 @@ Matriz::Matriz(char *file_name){
     pacman = new PacMan(map_int, map_pix, scene);
     pacman->setFlag(QGraphicsPixmapItem::ItemIsFocusable);
     pacman->setFocus();
+    naranja = new Naranja(scene, map_int, pacman);
 
 }

@@ -6,5 +6,8 @@
         <file>Arriba.png</file>
         <file>Derecha.png</file>
         <file>Izquierda.png</file>
+        <file>Comer.png</file>
+        <file>FantasmaN.png</file>
+        <file>Power.png</file>
     </qresource>
 </RCC>

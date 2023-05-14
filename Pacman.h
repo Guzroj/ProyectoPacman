@@ -11,21 +11,21 @@ class   PacMan : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
 private:
-    int                         i_pos;
-    int                         j_pos;
-    int                         direction;
-    int                         **map_int;
-    QGraphicsPixmapItem         **map_pix;
-    QGraphicsScene              *scene;
-    QGraphicsTextItem           *text;
-    QGraphicsTextItem           *message;
-    int                         vidas;
-    void                        refrescar();
-    int                         verimove(int i_pos, int j_pos);
-    int                         scared;
-    int                         counter;
-    int                         score;
-    int                         points;
+    int i_pos;
+    int j_pos;
+    int direction;
+    int**map_int;
+    QGraphicsPixmapItem**map_pix;
+    QGraphicsScene*scene;
+    QGraphicsTextItem*text;
+    QGraphicsTextItem*message;
+    int vidas;
+    void refrescar();
+    int verimove(int i_pos, int j_pos);
+    int scared;
+    int counter;
+    int score;
+    int points;
 public:
     PacMan(int **map_int, QGraphicsPixmapItem **map_pix, QGraphicsScene *scene);
     void    keyPressEvent(QKeyEvent *event);
