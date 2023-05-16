@@ -1,13 +1,13 @@
-#include "FantasmaN.h"
+#include "FantasmaA.h"
 #include <cmath>
 
-Naranja::Naranja(QGraphicsScene *sc, int **map, PacMan *pc) : Fantasma()
+Azul::Azul(QGraphicsScene *sc, int **map, PacMan *pc) : Fantasma()
 {
     scene = sc;
     pacman = pc;
 
     i_pos = 9;
-    j_pos = 8;
+    j_pos = 10;
     for (int i = 0; i < size_x; i++)
     {
         for (int j = 0; j < size_y; j++)
@@ -18,29 +18,29 @@ Naranja::Naranja(QGraphicsScene *sc, int **map, PacMan *pc) : Fantasma()
                 map_path[i][j] = -3;
         }
     }
-    this->setPixmap(QPixmap(":/Imagenes/FantasmaN.png"));
+    this->setPixmap(QPixmap(":/Imagenes/azul.png"));
     this->setPos(j_pos * 32, i_pos * 32);
     scene->addItem(this);
 }
 
-void        Naranja::find_pacman()
+void        Azul::find_pacman()
 {
     d = 0;
     flag = 0;
     if (!pacman->scared_state())
     {
-        this->setPixmap(QPixmap(":/Imagenes/FantasmaN.png"));
+        this->setPixmap(QPixmap(":/Imagenes/azul.png"));
         calculate_point();
     }
     else
     {
-        if (i_pos == size_x - 2 && j_pos == size_y - 2)
+        if (i_pos == size_x - 2 && j_pos == 1)
             pacman->set_scared();
         else
         {
-            this->setPixmap(QPixmap(":/Imagenes/Comer.png"));
+            this->setPixmap(QPixmap(":/Imagenes/comer.png"));
             i_exit = size_x - 2;
-            j_exit = size_y - 2;
+            j_exit = 1;
         }
     }
     map_path[i_pos][j_pos] = d;
@@ -57,7 +57,7 @@ void        Naranja::find_pacman()
     clear_map();
 }
 
-void        Naranja::find_path()
+void        Azul::find_path()
 {
     int i;
     int j;
@@ -65,7 +65,7 @@ void        Naranja::find_path()
 
     map_path[rojo->get_i_pos()][rojo->get_j_pos()] = -5;
     map_path[rosa->get_i_pos()][rosa->get_j_pos()] = -5;
-    map_path[azul->get_i_pos()][azul->get_j_pos()] = -5;
+    map_path[naranja->get_i_pos()][naranja->get_j_pos()] = -5;
     while (!flag && map_path[i_exit][j_exit] == -3)
     {
         i = 0;
@@ -99,13 +99,13 @@ void        Naranja::find_path()
     }
     map_path[rojo->get_i_pos()][rojo->get_j_pos()] = 0;
     map_path[rosa->get_i_pos()][rosa->get_j_pos()] = 0;
-    map_path[azul->get_i_pos()][azul->get_j_pos()] = 0;
+    map_path[naranja->get_i_pos()][naranja->get_j_pos()] = 0;
 }
 
-void        Naranja::set_default()
+void        Azul::set_default()
 {
     i_pos = 9;
-    j_pos = 8;
+    j_pos = 10;
 
     i_exit = i_pos;
     j_exit = j_pos;
@@ -113,36 +113,66 @@ void        Naranja::set_default()
     this->setPos(j_pos * 32, i_pos * 32);
 }
 
-void        Naranja::calculate_point()
+void        Azul::calculate_point()
 {
+    int direction;
+    int i_bl;
+    int j_bl;
     int distance;
 
-    distance = pow(i_pos - pacman->get_pacman_i(), 2);
-    distance += pow(j_pos - pacman->get_pacman_j(), 2);
-    distance = sqrt(distance);
-    if (distance <= 8)
+    direction = pacman->get_direction();
+    if (direction == 1)
     {
-        i_exit = pacman->get_pacman_i();
+        i_exit = pacman->get_pacman_i() - 2;
+        j_exit = pacman->get_pacman_j();
+        if (i_exit < 0)
+        {
+            i_exit = pacman->get_pacman_i();
+            j_exit = pacman->get_pacman_j();
+        }
+    }
+    if (direction == 2)
+    {
+        i_exit = pacman->get_pacman_i() + 2;
         j_exit = pacman->get_pacman_j();
     }
-    else
+    if (direction == 3)
     {
-        i_exit = size_x - 2;
-        j_exit = 1;
+        i_exit = pacman->get_pacman_i();
+        j_exit = pacman->get_pacman_j() - 2;
     }
-    this->setPixmap(QPixmap(":/pics/clyde.png"));
+    if (direction == 4)
+    {
+        i_exit = pacman->get_pacman_i();
+        j_exit = pacman->get_pacman_j() + 2;
+    }
+    i_bl = rojo->get_i_pos();
+    j_bl = rojo->get_j_pos();
+    distance = pow(i_bl - i_exit, 2);
+    distance += pow(j_bl - j_exit, 2);
+    distance = sqrt(distance);
+    distance /= 2;
+    i_exit += distance;
+    j_exit += distance;
+    if (i_exit <= 0 || i_exit >= (size_x - 1)
+        || j_exit <= 0 || j_exit >= (size_y - 1))
+    {
+        i_exit = 9;
+        j_exit = 10;
+    }
+    this->setPixmap(QPixmap(":/Imagenes/azul.png"));
 }
 
-void        Naranja::set_friends(Rojo *bl, Rosa *pnc, Azul *ink)
+void        Azul::set_friends(Rojo *bl, Rosa *pnc, Naranja *cld)
 {
     rojo = bl;
     rosa = pnc;
-    azul = ink;
+    naranja = cld;
 }
 
-void    Naranja::move_f()
+void    Azul::move_f()
 {
-    if (pacman->get_point() >= 90)
+    if (pacman->get_point() >= 100)
     {
         find_pacman();
         if (direction == 1)
