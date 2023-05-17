@@ -9,5 +9,9 @@
         <file>Comer.png</file>
         <file>FantasmaN.png</file>
         <file>Power.png</file>
+        <file>rosa.png</file>
+        <file>rojo.png</file>
+        <file>azul.png</file>
+        <file>energizer.png</file>
     </qresource>
 </RCC>

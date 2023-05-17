@@ -9,16 +9,16 @@ void    PacMan::refrescar()
 {
     static int flag;
 
-    /*if (points == 50)
+    if (points == 20)
     {
         map_int[15][9] = 6;
         if (!flag)
         {
-            map_pix[15][9].setPixmap(QPixmap(":/pics/cherries.png"));
+            map_pix[15][9].setPixmap(QPixmap(":/Imagenes/Power.png"));
             scene->addItem(&(map_pix[15][9]));
             flag = 1;
         }
-    }*/
+    }
     if (map_int[i_pos][j_pos] == 6)
     {
         score += 200;

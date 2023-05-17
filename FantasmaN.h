@@ -2,19 +2,26 @@
 #define FANTASMAN_H
 
 #include "fantasma.h"
+#include "FantasmaA.h"
+#include "FantasmaRS.h"
+#include "FantasmaR.h"
+
+class Rojo;
+class Rosa;
+class Azul;
 
 class       Naranja: public Fantasma
 {
 private:
-    //Blinky  *blinky;
-    //Pinky   *pinky;
-    //Inky    *inky;
+    Rojo  *rojo;
+    Rosa   *rosa;
+    Azul    *azul;
     Q_OBJECT
 public:
     void    set_default();
     void    calculate_point();
     void    find_pacman();
-   // void    ft_set_friends(Blinky *bl, Pinky *pnc, Inky *ink);
+    void    set_friends(Rojo *bl, Rosa *pnc, Azul *ink);
     void    find_path();
     Naranja(QGraphicsScene *sc, int **map, PacMan *pc);
 public slots:
