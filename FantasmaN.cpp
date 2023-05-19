@@ -22,7 +22,10 @@ Naranja::Naranja(QGraphicsScene *sc, int **map, PacMan *pc) : Fantasma()
     this->setPos(j_pos * 32, i_pos * 32);
     scene->addItem(this);
 }
-
+/**
+ * @brief Naranja::find_pacman
+ * Busca el pacman
+ */
 void        Naranja::find_pacman()
 {
     d = 0;
@@ -56,7 +59,10 @@ void        Naranja::find_pacman()
     set_direction();
     clear_map();
 }
-
+/**
+ * @brief Naranja::find_path
+ * Busca el camino hacia pacman
+ */
 void        Naranja::find_path()
 {
     int i;
@@ -101,7 +107,10 @@ void        Naranja::find_path()
     map_path[rosa->get_i_pos()][rosa->get_j_pos()] = 0;
     map_path[azul->get_i_pos()][azul->get_j_pos()] = 0;
 }
-
+/**
+ * @brief Naranja::set_default
+ * Define la posicion del fantasma naranja
+ */
 void        Naranja::set_default()
 {
     i_pos = 9;
@@ -132,14 +141,26 @@ void        Naranja::calculate_point()
     }
     this->setPixmap(QPixmap(":/pics/clyde.png"));
 }
-
+/**
+ * @brief Naranja::set_friends
+ * Define la posicion en donde estan los otros fantasmas para evitar choques entre ellos
+ * @param bl
+ * Es el fantasma rojo
+ * @param pnc
+ * Es el fantasma rosa
+ * @param ink
+ * Es el fantasma Azul
+ */
 void        Naranja::set_friends(Rojo *bl, Rosa *pnc, Azul *ink)
 {
     rojo = bl;
     rosa = pnc;
     azul = ink;
 }
-
+/**
+ * @brief Naranja::move_f
+ * Es un slot que permite el movimiento de los fantasmas
+ */
 void    Naranja::move_f()
 {
     if (pacman->get_point() >= 90)

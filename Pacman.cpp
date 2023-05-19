@@ -5,6 +5,12 @@
 #define HEIGHT 702
 #define size_x 21
 #define size_y 19
+
+/**
+ * @brief PacMan::refrescar
+ * Se encarga de refrescar los datos que recibe el pacman, es decir si se come el cherry, se come los fantasmas o come puntos
+ */
+
 void    PacMan::refrescar()
 {
     static int flag;
@@ -40,22 +46,36 @@ void    PacMan::refrescar()
         scene->removeItem(&(map_pix[i_pos][j_pos]));
     }
 }
-
+/**
+ * @brief PacMan::scared_state
+ * Se encarga de mandar el estado de asustado de los fantasmas
+ * @return
+ */
 int     PacMan::scared_state()
 {
     return (scared);
 }
-
+/**
+ * @brief PacMan::set_scared
+ * Define el estado de asustado en los fantasmas
+ */
 void    PacMan::set_scared()
 {
     scared = !scared;
 }
-
+/**
+ * @brief PacMan::get_score
+ * Consigue la puntuacion actual de los fantasmas
+ * @return
+ */
 int     PacMan::get_score()
 {
     return (score);
 }
-
+/**
+ * @brief PacMan::print_score
+ * Printea la puntuacion actual
+ */
 void    PacMan::print_score()
 {
     text->setDefaultTextColor(0x00ffffff);
@@ -63,17 +83,31 @@ void    PacMan::print_score()
     text->setPlainText("Puntuacion " + QString::number(score) + "\t\tVidas: " + QString::number(vidas));
     text->setPos(10 , HEIGHT - 30);
 }
-
+/**
+ * @brief PacMan::incr_score
+ * Aumenta la puntuacion
+ */
 void    PacMan::incr_score()
 {
     score += 100;
 }
-
+/**
+ * @brief PacMan::set_lives
+ * Se encarga de restar vidas, se llama en donde se definio para disminuir las vidas
+ */
 void    PacMan::set_lives()
 {
     vidas--;
 }
-
+/**
+ * @brief PacMan::PacMan
+ * Define los parametros que necesita el pacman, como la matriz y la matriz visual
+ * @param map_i
+ * Es la matriz
+ * @param map_p
+ * Es la matriz que visual
+ * @param sc
+ */
 PacMan::PacMan(int **map_i, QGraphicsPixmapItem **map_p, QGraphicsScene *sc)
 {
     i_pos = 15;
@@ -95,11 +129,21 @@ PacMan::PacMan(int **map_i, QGraphicsPixmapItem **map_p, QGraphicsScene *sc)
     scene->addItem(text);
     print_score();
 }
+/**
+ * @brief PacMan::get_direction
+ * Obtiene la direccion del pacman
+ * @return
+ */
 
 int     PacMan::get_direction()
 {
     return (direction);
 }
+/**
+ * @brief PacMan::keyPressEvent
+ * Hace los movimientos del pacman con los estimulos que uno manda
+ * @param event
+ */
 
 void    PacMan::keyPressEvent(QKeyEvent *event)
 {
@@ -129,7 +173,10 @@ int     PacMan::get_point()
 {
     return (points);
 }
-
+/**
+ * @brief PacMan::move
+ * Es un slot que permite el movmiento del pacman
+ */
 void    PacMan::move()
 {
     static int flag;
@@ -204,24 +251,41 @@ void    PacMan::move()
     }
     this->setPos(j_pos * 32, i_pos * 32);
 }
-
+/**
+ * @brief PacMan::get_pacman_i
+ * Localiza la fila donde esta el pacman
+ * @return
+ */
 int     PacMan::get_pacman_i(void)
 {
     return (i_pos);
 }
-
+/**
+ * @brief PacMan::get_pacman_j
+ * Localiza la columna donde esta pacman
+ * @return
+ */
 int     PacMan::get_pacman_j(void)
 {
     return (j_pos);
 }
-
+/**
+ * @brief PacMan::verimove
+ * Confrma el movmiento que va a realizar el pacman
+ * @param i_pos
+ * @param j_pos
+ * @return
+ */
 int     PacMan::verimove(int i_pos, int j_pos)
 {
     if (map_int[i_pos][j_pos] == 1)
         return (0);
     return (1);
 }
-
+/**
+ * @brief PacMan::set_defaut
+ * Define la posicion donde aparece el pacman
+ */
 void    PacMan::set_defaut()
 {
     i_pos = 15;

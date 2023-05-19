@@ -22,7 +22,10 @@ Azul::Azul(QGraphicsScene *sc, int **map, PacMan *pc) : Fantasma()
     this->setPos(j_pos * 32, i_pos * 32);
     scene->addItem(this);
 }
-
+/**
+ * @brief Azul::find_pacman
+ * Se encarga de buscar el pacman
+ */
 void        Azul::find_pacman()
 {
     d = 0;
@@ -56,7 +59,10 @@ void        Azul::find_pacman()
     set_direction();
     clear_map();
 }
-
+/**
+ * @brief Azul::find_path
+ * Busca el camino hacia pacman
+ */
 void        Azul::find_path()
 {
     int i;
@@ -101,7 +107,10 @@ void        Azul::find_path()
     map_path[rosa->get_i_pos()][rosa->get_j_pos()] = 0;
     map_path[naranja->get_i_pos()][naranja->get_j_pos()] = 0;
 }
-
+/**
+ * @brief Azul::set_default
+ * Define la posicion del fantasma
+ */
 void        Azul::set_default()
 {
     i_pos = 9;
@@ -112,7 +121,10 @@ void        Azul::set_default()
     direction = 0;
     this->setPos(j_pos * 32, i_pos * 32);
 }
-
+/**
+ * @brief Azul::calculate_point
+ * Calcula la ruta hacia el pacman
+ */
 void        Azul::calculate_point()
 {
     int direction;
@@ -162,14 +174,26 @@ void        Azul::calculate_point()
     }
     this->setPixmap(QPixmap(":/Imagenes/azul.png"));
 }
-
+/**
+ * @brief Azul::set_friends
+ * Define la posicion en donde estan los otros fantasmas para evitar choques entre ellos
+ * @param bl
+ * Es el fantasma rojo
+ * @param pnc
+ * Es el fantasma rosado
+ * @param cld
+ * Es el fantasma naranja
+ */
 void        Azul::set_friends(Rojo *bl, Rosa *pnc, Naranja *cld)
 {
     rojo = bl;
     rosa = pnc;
     naranja = cld;
 }
-
+/**
+ * @brief Azul::move_f
+ * Es un slot que permite el movimiento de los fantasmas
+ */
 void    Azul::move_f()
 {
     if (pacman->get_point() >= 100)

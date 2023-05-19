@@ -10,8 +10,12 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <unistd.h>
+#include <thread>
 
-
+/**
+ * @brief SocketServer
+ * Comunica la aplicacion con el qt creator
+ */
 void SocketServer() {
     int server_fd, new_socket;
     struct sockaddr_in address;
@@ -66,12 +70,14 @@ void SocketServer() {
 
         // Procesar mensajes entrantes
         char buffer[1024] = {0};
-    int valread = read(new_socket, buffer, 1024);
-    if (valread <= 0) {
-        std::cout << "Cliente desconectado" << std::endl;
-        close(new_socket);
-        return;
-    }
+        int valread = read(new_socket, buffer, 1024);
+
+        if (valread <= 0) {
+            std::cout << "Cliente desconectado" << std::endl;
+            close(new_socket);
+            return;
+        }
+
     std::cout << "Mensaje recibido: " << buffer << std::endl;
 
     char respuesta[] = "Mensaje recibido.\n";
@@ -87,7 +93,6 @@ void SocketServer() {
         return;
     }
 }
-
 //Comentario hecho para probar repositorio
 //Otro comentario solo para probar
 int main(int argc, char *argv[])
@@ -110,6 +115,9 @@ int main(int argc, char *argv[])
     loop->setSceneRect(0, 0, WIDTH, HEIGHT);
     loop->show();
     loop->corredor();
+
+    //std::thread serverThread(SocketServer);  // Crear un hilo para ejecutar el servidor de sockets
+    //serverThread.detach();  // Desconectar el hilo principal del hilo del servidor
 
     return a.exec();
 }

@@ -2,8 +2,7 @@
 \label{class_naranja}\index{Naranja@{Naranja}}
 
 
-Inheritance diagram for Naranja\+:
-\nopagebreak
+Inheritance diagram for Naranja\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for Naranja\+:
 \end{figure}
 
 
-Collaboration diagram for Naranja\+:
-\nopagebreak
+Collaboration diagram for Naranja\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,23 +21,26 @@ Collaboration diagram for Naranja\+:
 \doxysubsection*{Public Slots}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{class_naranja_a8131a0af738db2ee98bb2dee4a3a1c68}\label{class_naranja_a8131a0af738db2ee98bb2dee4a3a1c68}} 
 void \mbox{\hyperlink{class_naranja_a8131a0af738db2ee98bb2dee4a3a1c68}{move\+\_\+f}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_naranja_a8131a0af738db2ee98bb2dee4a3a1c68}{Naranja\+::move\+\_\+f}} Es un slot que permite el movimiento de los fantasmas. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_naranja_aa5284eddf646ffe854593423ef2ad2af}\label{class_naranja_aa5284eddf646ffe854593423ef2ad2af}} 
-void {\bfseries set\+\_\+default} ()
-\item 
+void \mbox{\hyperlink{class_naranja_aa5284eddf646ffe854593423ef2ad2af}{set\+\_\+default}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_naranja_aa5284eddf646ffe854593423ef2ad2af}{Naranja\+::set\+\_\+default}} Define la posicion del fantasma naranja. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_naranja_a6b2eae0f54b668fa4432e16ca8e4163b}\label{class_naranja_a6b2eae0f54b668fa4432e16ca8e4163b}} 
 void {\bfseries calculate\+\_\+point} ()
 \item 
 \mbox{\Hypertarget{class_naranja_a7b37d01f4c0558f94791f71763cfa6eb}\label{class_naranja_a7b37d01f4c0558f94791f71763cfa6eb}} 
-void {\bfseries find\+\_\+pacman} ()
-\item 
+void \mbox{\hyperlink{class_naranja_a7b37d01f4c0558f94791f71763cfa6eb}{find\+\_\+pacman}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_naranja_a7b37d01f4c0558f94791f71763cfa6eb}{Naranja\+::find\+\_\+pacman}} Busca el pacman. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_naranja_a1830ceae2eb2fe4e8fdd81b33ac191bd}{set\+\_\+friends}} (\mbox{\hyperlink{class_rojo}{Rojo}} $\ast$bl, \mbox{\hyperlink{class_rosa}{Rosa}} $\ast$pnc, \mbox{\hyperlink{class_azul}{Azul}} $\ast$ink)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_naranja_a1830ceae2eb2fe4e8fdd81b33ac191bd}{Naranja\+::set\+\_\+friends}} Define la posicion en donde estan los otros fantasmas para evitar choques entre ellos. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_naranja_a6a7af3ebf125d32f7d36f45d64a9d224}\label{class_naranja_a6a7af3ebf125d32f7d36f45d64a9d224}} 
-void {\bfseries find\+\_\+path} ()
-\item 
+void \mbox{\hyperlink{class_naranja_a6a7af3ebf125d32f7d36f45d64a9d224}{find\+\_\+path}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_naranja_a6a7af3ebf125d32f7d36f45d64a9d224}{Naranja\+::find\+\_\+path}} Busca el camino hacia pacman. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_naranja_a4c44e5d6f748cc4cecb212adb6a25b28}\label{class_naranja_a4c44e5d6f748cc4cecb212adb6a25b28}} 
 {\bfseries Naranja} (QGraphics\+Scene $\ast$sc, int $\ast$$\ast$map, \mbox{\hyperlink{class_pac_man}{Pac\+Man}} $\ast$pc)
 \end{DoxyCompactItemize}
@@ -47,13 +48,26 @@ void {\bfseries find\+\_\+path} ()
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_naranja_a8131a0af738db2ee98bb2dee4a3a1c68}\label{class_naranja_a8131a0af738db2ee98bb2dee4a3a1c68}} 
-\index{Naranja@{Naranja}!move\_f@{move\_f}}
-\index{move\_f@{move\_f}!Naranja@{Naranja}}
-\doxysubsubsection{\texorpdfstring{move\_f}{move\_f}}
-{\footnotesize\ttfamily void Naranja\+::move\+\_\+f (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+\mbox{\Hypertarget{class_naranja_a1830ceae2eb2fe4e8fdd81b33ac191bd}\label{class_naranja_a1830ceae2eb2fe4e8fdd81b33ac191bd}} 
+\index{Naranja@{Naranja}!set\_friends@{set\_friends}}
+\index{set\_friends@{set\_friends}!Naranja@{Naranja}}
+\doxysubsubsection{\texorpdfstring{set\_friends()}{set\_friends()}}
+{\footnotesize\ttfamily void Naranja\+::set\+\_\+friends (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_rojo}{Rojo}} $\ast$}]{bl,  }\item[{\mbox{\hyperlink{class_rosa}{Rosa}} $\ast$}]{pnc,  }\item[{\mbox{\hyperlink{class_azul}{Azul}} $\ast$}]{ink }\end{DoxyParamCaption})}
 
-void Clyde\+::ft\+\_\+set\+\_\+friends(\+Blinky $\ast$bl, Pinky $\ast$pnc, Inky $\ast$ink) \{ blinky = bl; pinky = pnc; inky = ink; \} 
+
+
+\mbox{\hyperlink{class_naranja_a1830ceae2eb2fe4e8fdd81b33ac191bd}{Naranja\+::set\+\_\+friends}} Define la posicion en donde estan los otros fantasmas para evitar choques entre ellos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bl} & Es el fantasma rojo \\
+\hline
+{\em pnc} & Es el fantasma rosa \\
+\hline
+{\em ink} & Es el fantasma \mbox{\hyperlink{class_azul}{Azul}} \\
+\hline
+\end{DoxyParams}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

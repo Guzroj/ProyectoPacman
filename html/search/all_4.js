@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['veri_5',['veri',['../class_matriz.html#a9cbc33749c71f09b59bdf510924a698f',1,'Matriz']]]
+  ['incr_5fscore_9',['incr_score',['../class_pac_man.html#aebea26c69b956dde12883c439701f750',1,'PacMan']]]
 ];

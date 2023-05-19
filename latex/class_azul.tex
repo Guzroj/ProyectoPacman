@@ -1,0 +1,77 @@
+\hypertarget{class_azul}{}\doxysection{Azul Class Reference}
+\label{class_azul}\index{Azul@{Azul}}
+
+
+Inheritance diagram for Azul\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{class_azul__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Azul\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{class_azul__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_azul_aa117e836b0f5b6afb0b006a1998ecfdc}\label{class_azul_aa117e836b0f5b6afb0b006a1998ecfdc}} 
+void \mbox{\hyperlink{class_azul_aa117e836b0f5b6afb0b006a1998ecfdc}{move\+\_\+f}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_azul_aa117e836b0f5b6afb0b006a1998ecfdc}{Azul\+::move\+\_\+f}} Es un slot que permite el movimiento de los fantasmas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_azul_a27d5f86b500f5af96bb2a4e90cb5549f}\label{class_azul_a27d5f86b500f5af96bb2a4e90cb5549f}} 
+void \mbox{\hyperlink{class_azul_a27d5f86b500f5af96bb2a4e90cb5549f}{set\+\_\+default}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_azul_a27d5f86b500f5af96bb2a4e90cb5549f}{Azul\+::set\+\_\+default}} Define la posicion del fantasma. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_azul_aa81f9dc2f394821b5fe4c7edd39b227d}\label{class_azul_aa81f9dc2f394821b5fe4c7edd39b227d}} 
+void \mbox{\hyperlink{class_azul_aa81f9dc2f394821b5fe4c7edd39b227d}{calculate\+\_\+point}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_azul_aa81f9dc2f394821b5fe4c7edd39b227d}{Azul\+::calculate\+\_\+point}} Calcula la ruta hacia el pacman. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_azul_a823441285bca292e7d4875e64afa4a8c}\label{class_azul_a823441285bca292e7d4875e64afa4a8c}} 
+void \mbox{\hyperlink{class_azul_a823441285bca292e7d4875e64afa4a8c}{find\+\_\+pacman}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_azul_a823441285bca292e7d4875e64afa4a8c}{Azul\+::find\+\_\+pacman}} Se encarga de buscar el pacman. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_azul_add10abb4857559718bec493223f3e481}{set\+\_\+friends}} (\mbox{\hyperlink{class_rojo}{Rojo}} $\ast$bl, \mbox{\hyperlink{class_rosa}{Rosa}} $\ast$pnc, \mbox{\hyperlink{class_naranja}{Naranja}} $\ast$cld)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_azul_add10abb4857559718bec493223f3e481}{Azul\+::set\+\_\+friends}} Define la posicion en donde estan los otros fantasmas para evitar choques entre ellos. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_azul_aa02881a573832b58dff70cb59e48dd10}\label{class_azul_aa02881a573832b58dff70cb59e48dd10}} 
+void \mbox{\hyperlink{class_azul_aa02881a573832b58dff70cb59e48dd10}{find\+\_\+path}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_azul_aa02881a573832b58dff70cb59e48dd10}{Azul\+::find\+\_\+path}} Busca el camino hacia pacman. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_azul_a3397fb17b82fd925a4f7ae944f99db2f}\label{class_azul_a3397fb17b82fd925a4f7ae944f99db2f}} 
+{\bfseries Azul} (QGraphics\+Scene $\ast$sc, int $\ast$$\ast$map, \mbox{\hyperlink{class_pac_man}{Pac\+Man}} $\ast$pc)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_azul_add10abb4857559718bec493223f3e481}\label{class_azul_add10abb4857559718bec493223f3e481}} 
+\index{Azul@{Azul}!set\_friends@{set\_friends}}
+\index{set\_friends@{set\_friends}!Azul@{Azul}}
+\doxysubsubsection{\texorpdfstring{set\_friends()}{set\_friends()}}
+{\footnotesize\ttfamily void Azul\+::set\+\_\+friends (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_rojo}{Rojo}} $\ast$}]{bl,  }\item[{\mbox{\hyperlink{class_rosa}{Rosa}} $\ast$}]{pnc,  }\item[{\mbox{\hyperlink{class_naranja}{Naranja}} $\ast$}]{cld }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_azul_add10abb4857559718bec493223f3e481}{Azul\+::set\+\_\+friends}} Define la posicion en donde estan los otros fantasmas para evitar choques entre ellos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bl} & Es el fantasma rojo \\
+\hline
+{\em pnc} & Es el fantasma rosado \\
+\hline
+{\em cld} & Es el fantasma naranja \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Fantasma\+A.\+h\item 
+Fantasma\+A.\+cpp\end{DoxyCompactItemize}
