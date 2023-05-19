@@ -15,13 +15,13 @@ void    PacMan::refrescar()
 {
     static int flag;
 
-    if (points == 20)
+    if (points == 10)
     {
-        map_int[15][20] = 6;
+        map_int[15][9] = 6;
         if (!flag)
         {
-            map_pix[15][20].setPixmap(QPixmap(":/Imagenes/Power.png"));
-            scene->addItem(&(map_pix[15][20]));
+            map_pix[15][9].setPixmap(QPixmap(":/Imagenes/Power.png"));
+            scene->addItem(&(map_pix[15][9]));
             flag = 1;
 
         }
