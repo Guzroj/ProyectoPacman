@@ -14,7 +14,7 @@ void        Rojo::calculate_point()
             pacman->set_scared();
         else
         {
-            this->setPixmap(QPixmap(":/Imagenes/comer.png"));
+            this->setPixmap(QPixmap(":/Imagenes/Comer.png"));
             i_exit = 1;
             j_exit = 1;
         }

@@ -41,7 +41,7 @@ void        Azul::find_pacman()
             pacman->set_scared();
         else
         {
-            this->setPixmap(QPixmap(":/Imagenes/comer.png"));
+            this->setPixmap(QPixmap(":/Imagenes/Comer.png"));
             i_exit = size_x - 2;
             j_exit = 1;
         }

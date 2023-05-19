@@ -139,7 +139,7 @@ void        Naranja::calculate_point()
         i_exit = size_x - 2;
         j_exit = 1;
     }
-    this->setPixmap(QPixmap(":/pics/clyde.png"));
+    this->setPixmap(QPixmap(":/Imagenes/FantasmaN.png"));
 }
 /**
  * @brief Naranja::set_friends

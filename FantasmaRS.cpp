@@ -73,7 +73,7 @@ void        Rosa::find_pacman()
     flag = 0;
     if (!pacman->scared_state())
     {
-        this->setPixmap(QPixmap(":/Imagenes/rojo.png"));
+        this->setPixmap(QPixmap(":/Imagenes/rosa.png"));
         calculate_point();
     }
     else
@@ -82,7 +82,7 @@ void        Rosa::find_pacman()
             pacman->set_scared();
         else
         {
-            this->setPixmap(QPixmap(":/Imagenes/comer.png"));
+            this->setPixmap(QPixmap(":/Imagenes/Comer.png"));
             i_exit = 1;
             j_exit = size_y - 2;
         }
