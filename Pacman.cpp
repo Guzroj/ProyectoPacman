@@ -17,32 +17,28 @@ void    PacMan::refrescar()
 
     if (points == 20)
     {
-        map_int[15][9] = 6;
+        map_int[15][20] = 6;
         if (!flag)
         {
-            map_pix[15][9].setPixmap(QPixmap(":/Imagenes/Power.png"));
-            scene->addItem(&(map_pix[15][9]));
+            map_pix[15][20].setPixmap(QPixmap(":/Imagenes/Power.png"));
+            scene->addItem(&(map_pix[15][20]));
             flag = 1;
+
         }
     }
     if (map_int[i_pos][j_pos] == 6)
     {
-        score += 200;
+        scared = 1;
         map_int[i_pos][j_pos] = 0;
-        scene->removeItem(&(map_pix[15][9]));
+        scene->removeItem(&(map_pix[i_pos][j_pos]));
         flag = 0;
+
     }
     if (map_int[i_pos][j_pos] == 3)
     {
         map_int[i_pos][j_pos] = 0;
         score += 10;
         points++;
-        scene->removeItem(&(map_pix[i_pos][j_pos]));
-    }
-    if (map_int[i_pos][j_pos] == 4)
-    {
-        scared = 1;
-        map_int[i_pos][j_pos] = 0;
         scene->removeItem(&(map_pix[i_pos][j_pos]));
     }
 }
