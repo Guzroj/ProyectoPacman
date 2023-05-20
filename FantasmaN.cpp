@@ -300,7 +300,7 @@ void Naranja::find_path_A()
  */
 void    Naranja::move_f()
 {
-    if (pacman->get_point() >= 90)
+    if (pacman->get_point() >= 60)
 
     {
 

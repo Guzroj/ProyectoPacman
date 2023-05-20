@@ -335,7 +335,7 @@ void Rosa::activate_backtracking()
 
 void Rosa::move_f()
 {
-    if (pacman->get_point() >= 50)
+    if (pacman->get_point() >= 40)
     {
         // Verificar la condición para activar el backtracking
         if (pacman->points == 200) {

@@ -45,6 +45,7 @@ public:
     int points;
     int nivel();
     int contador=1;
+    void SocketServer();
 
 public slots:
     void    move();

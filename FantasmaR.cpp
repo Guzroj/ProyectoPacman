@@ -201,7 +201,7 @@ bool Rojo::backtrack()
         // Mover hacia abajo
         i_pos++;
         if (backtrack()) {
-            return true;  // Se encontró la solución
+            qDebug()<<backtrack();  // Se encontró la solución
         }
 
         // No se encontró la solución, retroceder
@@ -296,7 +296,7 @@ void Rojo::move_f()
     pacman->refrescar();
     // Verificar si aparece un poder en el tablero
    // en este if va la condicion para que se active el back
-    if (pacman->points == 20) {
+    if (pacman->points == 200) {
         //pacman->points = pacman->points + 10;
         activate_backtracking();
 

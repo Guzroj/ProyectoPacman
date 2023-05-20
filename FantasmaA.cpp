@@ -196,7 +196,7 @@ void        Azul::set_friends(Rojo *bl, Rosa *pnc, Naranja *cld)
  */
 void    Azul::move_f()
 {
-    if (pacman->get_point() >= 100)
+    if (pacman->get_point() >= 70)
     {
         find_pacman();
         if (direction == 1)
