@@ -2,6 +2,15 @@
 \label{class_rojo}\index{Rojo@{Rojo}}
 
 
+The \mbox{\hyperlink{class_rojo}{Rojo}} class clase del fantasma rojo.  
+
+
+
+
+{\ttfamily \#include $<$Fantasma\+R.\+h$>$}
+
+
+
 Inheritance diagram for Rojo\+:
 \nopagebreak
 \begin{figure}[H]
@@ -24,30 +33,96 @@ Collaboration diagram for Rojo\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_rojo_ad145e11cb04b253fa6d8f19fcba76783}\label{class_rojo_ad145e11cb04b253fa6d8f19fcba76783}} 
-void {\bfseries move\+\_\+f} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_rojo_ad145e11cb04b253fa6d8f19fcba76783}{move\+\_\+f}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rojo_ad145e11cb04b253fa6d8f19fcba76783}{Rojo\+::move\+\_\+f}} Se encarga de mover al fantasma, determina si se debe utilizar el algoritmo de busqueda por amplitud o backtracking. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_rojo_a662faa8071a3768d10c808eeeeb6423f}\label{class_rojo_a662faa8071a3768d10c808eeeeb6423f}} 
-{\bfseries Rojo} (QGraphics\+Scene $\ast$sc, int $\ast$$\ast$map, \mbox{\hyperlink{class_pac_man}{Pac\+Man}} $\ast$pc)
-\item 
+\mbox{\hyperlink{class_rojo_a662faa8071a3768d10c808eeeeb6423f}{Rojo}} (QGraphics\+Scene $\ast$sc, int $\ast$$\ast$map, \mbox{\hyperlink{class_pac_man}{Pac\+Man}} $\ast$pc)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rojo_a662faa8071a3768d10c808eeeeb6423f}{Rojo\+::\+Rojo}} reconoce los demas fantasmas para ubicarse bien. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_rojo_a67bb7358982c12ce19aaf40e229a89f0}\label{class_rojo_a67bb7358982c12ce19aaf40e229a89f0}} 
 void {\bfseries set\+\_\+default} ()
 \item 
 \mbox{\Hypertarget{class_rojo_a9870392d76e87a2db7b573b7698bae51}\label{class_rojo_a9870392d76e87a2db7b573b7698bae51}} 
-void {\bfseries calculate\+\_\+point} ()
-\item 
+void \mbox{\hyperlink{class_rojo_a9870392d76e87a2db7b573b7698bae51}{calculate\+\_\+point}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rojo_a9870392d76e87a2db7b573b7698bae51}{Rojo\+::calculate\+\_\+point}} calcula la distancia y el punto de pacman. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_rojo_afe7fcb5249a8c98dd7add52c12a64839}\label{class_rojo_afe7fcb5249a8c98dd7add52c12a64839}} 
-void {\bfseries find\+\_\+pacman} ()
-\item 
+void \mbox{\hyperlink{class_rojo_afe7fcb5249a8c98dd7add52c12a64839}{find\+\_\+pacman}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rojo_afe7fcb5249a8c98dd7add52c12a64839}{Rojo\+::find\+\_\+pacman}} encuentra a pacman y la ruta hacia el. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_rojo_a3d4f3daaa825947fe9e8d7cfc7b0375c}\label{class_rojo_a3d4f3daaa825947fe9e8d7cfc7b0375c}} 
 void {\bfseries set\+\_\+friends} (\mbox{\hyperlink{class_rosa}{Rosa}} $\ast$pin, \mbox{\hyperlink{class_naranja}{Naranja}} $\ast$cl, \mbox{\hyperlink{class_azul}{Azul}} $\ast$ink)
 \item 
 \mbox{\Hypertarget{class_rojo_a7f219d61dff49ff3b52c037dc90c37e2}\label{class_rojo_a7f219d61dff49ff3b52c037dc90c37e2}} 
 void {\bfseries find\+\_\+path} ()
+\item 
+bool \mbox{\hyperlink{class_rojo_ae4f01c022fb8c265e40da0fdf02b2d97}{check\+\_\+solution}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rojo_ae4f01c022fb8c265e40da0fdf02b2d97}{Rojo\+::check\+\_\+solution}} verifica la solucion encontrada. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rojo_a26fa1ec410398fb7828d3cf48b29b506}\label{class_rojo_a26fa1ec410398fb7828d3cf48b29b506}} 
+void \mbox{\hyperlink{class_rojo_a26fa1ec410398fb7828d3cf48b29b506}{activate\+\_\+backtracking}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rojo_a26fa1ec410398fb7828d3cf48b29b506}{Rojo\+::activate\+\_\+backtracking}} verifica si hay que activar backtracking. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_rojo_aba48d175431fae6e030d9ce5aac4a431}{backtrack}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rojo_aba48d175431fae6e030d9ce5aac4a431}{Rojo\+::backtrack}} realiza la busqueda utilizando backtracking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_rojo_a605f4cd492d6d656366b83f8d55c53c1}\label{class_rojo_a605f4cd492d6d656366b83f8d55c53c1}} 
+bool {\bfseries backtracking\+\_\+active} =false
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_rojo}{Rojo}} class clase del fantasma rojo. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_rojo_a662faa8071a3768d10c808eeeeb6423f}\label{class_rojo_a662faa8071a3768d10c808eeeeb6423f}} 
+\index{Rojo@{Rojo}!Rojo@{Rojo}}
+\index{Rojo@{Rojo}!Rojo@{Rojo}}
+\doxysubsubsection{\texorpdfstring{Rojo()}{Rojo()}}
+{\footnotesize\ttfamily Rojo\+::\+Rojo (\begin{DoxyParamCaption}\item[{QGraphics\+Scene $\ast$}]{sc,  }\item[{int $\ast$$\ast$}]{map,  }\item[{\mbox{\hyperlink{class_pac_man}{Pac\+Man}} $\ast$}]{pc }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_rojo_a662faa8071a3768d10c808eeeeb6423f}{Rojo\+::\+Rojo}} reconoce los demas fantasmas para ubicarse bien. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sc} & referencia a scene \\
+\hline
+{\em map} & referencia al map \\
+\hline
+{\em pc} & referencia a pacman \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rojo_aba48d175431fae6e030d9ce5aac4a431}\label{class_rojo_aba48d175431fae6e030d9ce5aac4a431}} 
+\index{Rojo@{Rojo}!backtrack@{backtrack}}
+\index{backtrack@{backtrack}!Rojo@{Rojo}}
+\doxysubsubsection{\texorpdfstring{backtrack()}{backtrack()}}
+{\footnotesize\ttfamily bool Rojo\+::backtrack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_rojo_aba48d175431fae6e030d9ce5aac4a431}{Rojo\+::backtrack}} realiza la busqueda utilizando backtracking. 
+
+\begin{DoxyReturn}{Returns}
+regresa el resultado de utilizar el backtracking 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_rojo_ae4f01c022fb8c265e40da0fdf02b2d97}\label{class_rojo_ae4f01c022fb8c265e40da0fdf02b2d97}} 
+\index{Rojo@{Rojo}!check\_solution@{check\_solution}}
+\index{check\_solution@{check\_solution}!Rojo@{Rojo}}
+\doxysubsubsection{\texorpdfstring{check\_solution()}{check\_solution()}}
+{\footnotesize\ttfamily bool Rojo\+::check\+\_\+solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_rojo_ae4f01c022fb8c265e40da0fdf02b2d97}{Rojo\+::check\+\_\+solution}} verifica la solucion encontrada. 
+
+\begin{DoxyReturn}{Returns}
+retorna la ubicacion de la solucion 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

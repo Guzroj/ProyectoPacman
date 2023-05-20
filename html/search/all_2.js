@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['fantasma_2',['Fantasma',['../class_fantasma.html',1,'']]],
-  ['find_5fpacman_3',['find_pacman',['../class_azul.html#a823441285bca292e7d4875e64afa4a8c',1,'Azul::find_pacman()'],['../class_naranja.html#a7b37d01f4c0558f94791f71763cfa6eb',1,'Naranja::find_pacman()']]],
-  ['find_5fpath_4',['find_path',['../class_azul.html#aa02881a573832b58dff70cb59e48dd10',1,'Azul::find_path()'],['../class_naranja.html#a6a7af3ebf125d32f7d36f45d64a9d224',1,'Naranja::find_path()']]]
+  ['calculate_5fpoint_3',['calculate_point',['../class_azul.html#aa81f9dc2f394821b5fe4c7edd39b227d',1,'Azul::calculate_point()'],['../class_rojo.html#a9870392d76e87a2db7b573b7698bae51',1,'Rojo::calculate_point()'],['../class_rosa.html#a01fc9e444572b32912617c65822036f1',1,'Rosa::calculate_point()']]],
+  ['check_5fsolution_4',['check_solution',['../class_rojo.html#ae4f01c022fb8c265e40da0fdf02b2d97',1,'Rojo::check_solution()'],['../class_rosa.html#aaaccd56bfc92a52d343a1a226186678d',1,'Rosa::check_solution()']]],
+  ['corredor_5',['corredor',['../class_matriz.html#ac061816cca19e509cdae979915f3da73',1,'Matriz']]],
+  ['creamapa_6',['creaMapa',['../class_matriz.html#ac391eb8fa20b614fd6c5696deae10a10',1,'Matriz']]]
 ];

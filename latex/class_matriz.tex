@@ -2,42 +2,101 @@
 \label{class_matriz}\index{Matriz@{Matriz}}
 
 
-Inheritance diagram for Matriz\+:\nopagebreak
+The \mbox{\hyperlink{class_matriz}{Matriz}} class clase para el mapa.  
+
+
+
+
+{\ttfamily \#include $<$Matriz\+L.\+h$>$}
+
+
+
+Inheritance diagram for Matriz\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=165pt]{class_matriz__inherit__graph}
+\includegraphics[width=171pt]{class_matriz__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Matriz\+:\nopagebreak
+Collaboration diagram for Matriz\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=165pt]{class_matriz__coll__graph}
+\includegraphics[width=171pt]{class_matriz__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_matriz_a3894c2079c08ab651208bf6b730a6c05}\label{class_matriz_a3894c2079c08ab651208bf6b730a6c05}} 
-{\bfseries Matriz} (char $\ast$file\+\_\+name)
-\item 
-\mbox{\Hypertarget{class_matriz_a2d8089c18677a674d7f2101035d60004}\label{class_matriz_a2d8089c18677a674d7f2101035d60004}} 
-void {\bfseries lector\+Lineas} (int $\ast$map, std\+::string le)
-\item 
+\mbox{\hyperlink{class_matriz_a3894c2079c08ab651208bf6b730a6c05}{Matriz}} (char $\ast$file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_matriz_a3894c2079c08ab651208bf6b730a6c05}{Matriz\+::\+Matriz}} Se usa para abrir la matriz desde el txt. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_matriz_a2092b7a289ecec369e1da407d5839f5a}\label{class_matriz_a2092b7a289ecec369e1da407d5839f5a}} 
+\mbox{\hyperlink{class_matriz_a2092b7a289ecec369e1da407d5839f5a}{$\sim$\+Matriz}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_matriz_a2092b7a289ecec369e1da407d5839f5a}{Matriz\+::$\sim$\+Matriz}} Borra todo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matriz_a2d8089c18677a674d7f2101035d60004}{lector\+Lineas}} (int $\ast$map, std\+::string le)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_matriz_a2d8089c18677a674d7f2101035d60004}{Matriz\+::lector\+Lineas}} Lee las lineas de la matriz. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_matriz_ac061816cca19e509cdae979915f3da73}\label{class_matriz_ac061816cca19e509cdae979915f3da73}} 
-void {\bfseries corredor} ()
-\item 
+void \mbox{\hyperlink{class_matriz_ac061816cca19e509cdae979915f3da73}{corredor}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_matriz_ac061816cca19e509cdae979915f3da73}{Matriz\+::corredor}} Estan todos los qtimers. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_matriz_ac391eb8fa20b614fd6c5696deae10a10}\label{class_matriz_ac391eb8fa20b614fd6c5696deae10a10}} 
-void {\bfseries crea\+Mapa} ()
-\item 
+void \mbox{\hyperlink{class_matriz_ac391eb8fa20b614fd6c5696deae10a10}{crea\+Mapa}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_matriz_ac391eb8fa20b614fd6c5696deae10a10}{Matriz\+::crea\+Mapa}} Crea mapa de la matriz. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_matriz_a9cbc33749c71f09b59bdf510924a698f}{veri}} (std\+::string le)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_matriz_a9cbc33749c71f09b59bdf510924a698f}{Matriz\+::veri}} Se encarga de verificar que exista la matriz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_matriz_a9cbc33749c71f09b59bdf510924a698f}{Matriz\+::veri}} Se encarga de verificar que exista la matriz. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_matriz_a5a32f7cc8855fa7cb70ae4ff7816fd2b}\label{class_matriz_a5a32f7cc8855fa7cb70ae4ff7816fd2b}} 
+int {\bfseries nivel} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_matriz_af6b35a5b29dba48c103f2e4913d48284}\label{class_matriz_af6b35a5b29dba48c103f2e4913d48284}} 
+int {\bfseries contador} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_matriz}{Matriz}} class clase para el mapa. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_matriz_a3894c2079c08ab651208bf6b730a6c05}\label{class_matriz_a3894c2079c08ab651208bf6b730a6c05}} 
+\index{Matriz@{Matriz}!Matriz@{Matriz}}
+\index{Matriz@{Matriz}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{Matriz()}{Matriz()}}
+{\footnotesize\ttfamily Matriz\+::\+Matriz (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_matriz_a3894c2079c08ab651208bf6b730a6c05}{Matriz\+::\+Matriz}} Se usa para abrir la matriz desde el txt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & Es nuestro map.\+txt \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_matriz_a2d8089c18677a674d7f2101035d60004}\label{class_matriz_a2d8089c18677a674d7f2101035d60004}} 
+\index{Matriz@{Matriz}!lectorLineas@{lectorLineas}}
+\index{lectorLineas@{lectorLineas}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{lectorLineas()}{lectorLineas()}}
+{\footnotesize\ttfamily void Matriz\+::lector\+Lineas (\begin{DoxyParamCaption}\item[{int $\ast$}]{map,  }\item[{std\+::string}]{le }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_matriz_a2d8089c18677a674d7f2101035d60004}{Matriz\+::lector\+Lineas}} Lee las lineas de la matriz. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & Es la matriz dinamica \\
+\hline
+{\em le} & Es un string de la fila \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_matriz_a9cbc33749c71f09b59bdf510924a698f}\label{class_matriz_a9cbc33749c71f09b59bdf510924a698f}} 
 \index{Matriz@{Matriz}!veri@{veri}}
 \index{veri@{veri}!Matriz@{Matriz}}

@@ -21,6 +21,10 @@
 #include "FantasmaR.h"
 #include "FantasmaRS.h"
 
+/**
+ * @brief The Matriz class
+ * clase para el mapa
+ */
 class Matriz : public QGraphicsView{
 private:
     QGraphicsScene          *scene;

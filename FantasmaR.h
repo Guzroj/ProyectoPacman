@@ -10,6 +10,10 @@ class Rosa;
 class Naranja;
 class Azul;
 
+/**
+ * @brief The Rojo class
+ * clase del fantasma rojo
+ */
 class Rojo: public Fantasma
 {
 private:

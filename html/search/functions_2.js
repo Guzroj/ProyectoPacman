@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['get_5fdirection_36',['get_direction',['../class_pac_man.html#a813a6adf5512a9e23afeb88bc5ea42d6',1,'PacMan']]],
-  ['get_5fpacman_5fi_37',['get_pacman_i',['../class_pac_man.html#a72b07cc73f8a34498ac87fd0b2d6b40e',1,'PacMan']]],
-  ['get_5fpacman_5fj_38',['get_pacman_j',['../class_pac_man.html#a2695e7db640b05ff3bb5363ad7f6c086',1,'PacMan']]],
-  ['get_5fscore_39',['get_score',['../class_pac_man.html#aa72e8aaab545119df17b4fc5fe5ab4c6',1,'PacMan']]]
+  ['calculate_5fpoint_48',['calculate_point',['../class_azul.html#aa81f9dc2f394821b5fe4c7edd39b227d',1,'Azul::calculate_point()'],['../class_rojo.html#a9870392d76e87a2db7b573b7698bae51',1,'Rojo::calculate_point()'],['../class_rosa.html#a01fc9e444572b32912617c65822036f1',1,'Rosa::calculate_point()']]],
+  ['check_5fsolution_49',['check_solution',['../class_rojo.html#ae4f01c022fb8c265e40da0fdf02b2d97',1,'Rojo::check_solution()'],['../class_rosa.html#aaaccd56bfc92a52d343a1a226186678d',1,'Rosa::check_solution()']]],
+  ['corredor_50',['corredor',['../class_matriz.html#ac061816cca19e509cdae979915f3da73',1,'Matriz']]],
+  ['creamapa_51',['creaMapa',['../class_matriz.html#ac391eb8fa20b614fd6c5696deae10a10',1,'Matriz']]]
 ];

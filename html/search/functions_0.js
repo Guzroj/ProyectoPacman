@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['calculate_5fpoint_33',['calculate_point',['../class_azul.html#aa81f9dc2f394821b5fe4c7edd39b227d',1,'Azul']]]
+  ['activate_5fbacktracking_46',['activate_backtracking',['../class_rojo.html#a26fa1ec410398fb7828d3cf48b29b506',1,'Rojo::activate_backtracking()'],['../class_rosa.html#aceffde029452f908e32a98fdb276bd95',1,'Rosa::activate_backtracking()']]]
 ];

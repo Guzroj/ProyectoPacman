@@ -2,20 +2,31 @@
 \label{class_pac_man}\index{PacMan@{PacMan}}
 
 
-Inheritance diagram for Pac\+Man\+:\nopagebreak
+The \mbox{\hyperlink{class_pac_man}{Pac\+Man}} class clase que se encarga de los metodos de pacman.  
+
+
+
+
+{\ttfamily \#include $<$Pacman.\+h$>$}
+
+
+
+Inheritance diagram for Pac\+Man\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=268pt]{class_pac_man__inherit__graph}
+\includegraphics[width=280pt]{class_pac_man__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Pac\+Man\+:\nopagebreak
+Collaboration diagram for Pac\+Man\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=268pt]{class_pac_man__coll__graph}
+\includegraphics[width=280pt]{class_pac_man__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Slots}
@@ -56,10 +67,32 @@ void \mbox{\hyperlink{class_pac_man_a70359688df779e67e3bd6c357ca0e8d3}{print\+\_
 \mbox{\Hypertarget{class_pac_man_a801d292ddfe157ff3ac6aaf0363f8464}\label{class_pac_man_a801d292ddfe157ff3ac6aaf0363f8464}} 
 void \mbox{\hyperlink{class_pac_man_a801d292ddfe157ff3ac6aaf0363f8464}{set\+\_\+lives}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_pac_man_a801d292ddfe157ff3ac6aaf0363f8464}{Pac\+Man\+::set\+\_\+lives}} Se encarga de restar vidas, se llama en donde se definio para disminuir las vidas. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_pac_man_a21911833893fa7f10fc1d8b5460d06b2}\label{class_pac_man_a21911833893fa7f10fc1d8b5460d06b2}} 
-int {\bfseries get\+\_\+point} ()
+int \mbox{\hyperlink{class_pac_man_a21911833893fa7f10fc1d8b5460d06b2}{get\+\_\+point}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_pac_man_a21911833893fa7f10fc1d8b5460d06b2}{Pac\+Man\+::get\+\_\+point}} Obtiene la cantidad de puntos. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pac_man_a85407f74897cd72961f01216cfbcfb84}\label{class_pac_man_a85407f74897cd72961f01216cfbcfb84}} 
+void \mbox{\hyperlink{class_pac_man_a85407f74897cd72961f01216cfbcfb84}{refrescar}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_pac_man_a85407f74897cd72961f01216cfbcfb84}{Pac\+Man\+::refrescar}} Se encarga de refrescar los datos que recibe el pacman, es decir si se come el cherry, se come los fantasmas o come puntos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pac_man_acf04ee4f96a49f5d8543fcbbc20c28cd}{nivel}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_pac_man_acf04ee4f96a49f5d8543fcbbc20c28cd}{Pac\+Man\+::nivel}} Aumenta el nivel del juego. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pac_man_a8708776434766600ae14977dfb1d3b47}\label{class_pac_man_a8708776434766600ae14977dfb1d3b47}} 
+void \mbox{\hyperlink{class_pac_man_a8708776434766600ae14977dfb1d3b47}{Socket\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Socket\+Server Comunica la aplicacion con el qt creator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pac_man_af91d122ce6179b2de9a0a7eab0b9f702}\label{class_pac_man_af91d122ce6179b2de9a0a7eab0b9f702}} 
+int {\bfseries points}
+\item 
+\mbox{\Hypertarget{class_pac_man_a8986b5fce9289faa9cb0c15a8f329b84}\label{class_pac_man_a8986b5fce9289faa9cb0c15a8f329b84}} 
+int {\bfseries contador} =1
+\item 
+\mbox{\Hypertarget{class_pac_man_adba3e684b2a587218e8448c31bf54a5c}\label{class_pac_man_adba3e684b2a587218e8448c31bf54a5c}} 
+int {\bfseries numero}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_pac_man}{Pac\+Man}} class clase que se encarga de los metodos de pacman. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_pac_man_a988a7643a6569b0354d460960ac3db05}\label{class_pac_man_a988a7643a6569b0354d460960ac3db05}} 
@@ -123,6 +156,19 @@ int {\bfseries get\+\_\+point} ()
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_pac_man_a21911833893fa7f10fc1d8b5460d06b2}\label{class_pac_man_a21911833893fa7f10fc1d8b5460d06b2}} 
+\index{PacMan@{PacMan}!get\_point@{get\_point}}
+\index{get\_point@{get\_point}!PacMan@{PacMan}}
+\doxysubsubsection{\texorpdfstring{get\_point()}{get\_point()}}
+{\footnotesize\ttfamily int Pac\+Man\+::get\+\_\+point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_pac_man_a21911833893fa7f10fc1d8b5460d06b2}{Pac\+Man\+::get\+\_\+point}} Obtiene la cantidad de puntos. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_pac_man_aa72e8aaab545119df17b4fc5fe5ab4c6}\label{class_pac_man_aa72e8aaab545119df17b4fc5fe5ab4c6}} 
 \index{PacMan@{PacMan}!get\_score@{get\_score}}
 \index{get\_score@{get\_score}!PacMan@{PacMan}}
@@ -151,6 +197,19 @@ int {\bfseries get\+\_\+point} ()
 {\em event} & \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_pac_man_acf04ee4f96a49f5d8543fcbbc20c28cd}\label{class_pac_man_acf04ee4f96a49f5d8543fcbbc20c28cd}} 
+\index{PacMan@{PacMan}!nivel@{nivel}}
+\index{nivel@{nivel}!PacMan@{PacMan}}
+\doxysubsubsection{\texorpdfstring{nivel()}{nivel()}}
+{\footnotesize\ttfamily int Pac\+Man\+::nivel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_pac_man_acf04ee4f96a49f5d8543fcbbc20c28cd}{Pac\+Man\+::nivel}} Aumenta el nivel del juego. 
+
+\begin{DoxyReturn}{Returns}
+la variable contador aumentada 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_pac_man_a4195ce775a44361599887b1e24825889}\label{class_pac_man_a4195ce775a44361599887b1e24825889}} 
 \index{PacMan@{PacMan}!scared\_state@{scared\_state}}
 \index{scared\_state@{scared\_state}!PacMan@{PacMan}}

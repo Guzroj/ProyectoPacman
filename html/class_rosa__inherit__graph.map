@@ -1,6 +1,6 @@
 <map id="Rosa" name="Rosa">
-<area shape="rect" id="node1" title=" " alt="" coords="87,155,142,181"/>
-<area shape="rect" id="node2" href="$class_fantasma.html" title=" " alt="" coords="72,80,157,107"/>
+<area shape="rect" id="node1" title="The Rosa class clase para el fantasma rosa." alt="" coords="87,155,142,181"/>
+<area shape="rect" id="node2" href="$class_fantasma.html" title="The Fantasma class es la clase padre de los demas fantasmas." alt="" coords="72,80,157,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,5,80,32"/>
 <area shape="rect" id="node4" title=" " alt="" coords="104,5,272,32"/>
 </map>

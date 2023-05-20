@@ -1,9 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_azul.html" title=" " alt="" coords="17,56,68,83"/>
-<area shape="rect" id="node2" href="$class_fantasma.html" title=" " alt="" coords="128,56,213,83"/>
-<area shape="rect" id="node6" href="$class_pac_man.html" title=" " alt="" coords="135,107,207,133"/>
-<area shape="rect" id="node3" href="$class_naranja.html" title=" " alt="" coords="261,5,335,32"/>
-<area shape="rect" id="node4" href="$class_rojo.html" title=" " alt="" coords="273,56,323,83"/>
-<area shape="rect" id="node5" href="$class_rosa.html" title=" " alt="" coords="271,107,325,133"/>
+<area shape="rect" id="node1" href="$class_naranja.html" title="The Naranja class clase del fantasma naranja." alt="" coords="6,56,79,83"/>
+<area shape="rect" id="node2" href="$class_fantasma.html" title="The Fantasma class es la clase padre de los demas fantasmas." alt="" coords="128,56,213,83"/>
+<area shape="rect" id="node6" href="$class_pac_man.html" title="The PacMan class clase que se encarga de los metodos de pacman." alt="" coords="135,107,207,133"/>
+<area shape="rect" id="node3" href="$class_azul.html" title="The Azul class clase del fantasma azul." alt="" coords="263,5,314,32"/>
+<area shape="rect" id="node4" href="$class_rojo.html" title="The Rojo class clase del fantasma rojo." alt="" coords="263,56,314,83"/>
+<area shape="rect" id="node5" href="$class_rosa.html" title="The Rosa class clase para el fantasma rosa." alt="" coords="261,107,316,133"/>
 <area shape="rect" id="node7" title=" " alt="" coords="5,107,80,133"/>
 </map>

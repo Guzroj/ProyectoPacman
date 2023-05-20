@@ -88,40 +88,47 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;FantasmaR.h&quot;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;FantasmaRS.h&quot;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_matriz.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_matriz.html">Matriz</a> : <span class="keyword">public</span> QGraphicsView{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    QGraphicsScene          *scene;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    QGraphicsView           *view;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    QGraphicsPixmapItem     **map_pix;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span>                     **map_int;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_pac_man.html">PacMan</a>                  *pacman;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_naranja.html">Naranja</a>                 *naranja;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_rojo.html">Rojo</a>                    *rojo;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_azul.html">Azul</a>                    *azul;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_rosa.html">Rosa</a>                    *rosa;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    QTimer                  *timer_pacman;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    QTimer                  *timer_naranja;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    QTimer                  *timer_rojo;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    QTimer                  *timer_azul;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    QTimer                  *timer_rosa;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_matriz.html">Matriz</a>(<span class="keywordtype">char</span> *file_name);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    ~<a class="code" href="class_matriz.html">Matriz</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> lectorLineas(<span class="keywordtype">int</span> *map, std::string le );</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> corredor();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> creaMapa();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_matriz.html#a9cbc33749c71f09b59bdf510924a698f">veri</a>(std::string le);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// MATRIZL_H</span></div>
-<div class="ttc" id="aclass_azul_html"><div class="ttname"><a href="class_azul.html">Azul</a></div><div class="ttdef"><b>Definition:</b> FantasmaA.h:14</div></div>
-<div class="ttc" id="aclass_matriz_html"><div class="ttname"><a href="class_matriz.html">Matriz</a></div><div class="ttdef"><b>Definition:</b> MatrizL.h:24</div></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_matriz.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_matriz.html">Matriz</a> : <span class="keyword">public</span> QGraphicsView{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    QGraphicsScene          *scene;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    QGraphicsView           *view;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    QGraphicsPixmapItem     **map_pix;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span>                     **map_int;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_pac_man.html">PacMan</a>                  *pacman;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_naranja.html">Naranja</a>                 *naranja;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_rojo.html">Rojo</a>                    *rojo;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_azul.html">Azul</a>                    *azul;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_rosa.html">Rosa</a>                    *rosa;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    QTimer                  *timer_pacman;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    QTimer                  *timer_naranja;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    QTimer                  *timer_rojo;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    QTimer                  *timer_azul;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    QTimer                  *timer_rosa;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="class_matriz.html#a3894c2079c08ab651208bf6b730a6c05">Matriz</a>(<span class="keywordtype">char</span> *file_name);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_matriz.html#a2092b7a289ecec369e1da407d5839f5a">~Matriz</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_matriz.html#a2d8089c18677a674d7f2101035d60004">lectorLineas</a>(<span class="keywordtype">int</span> *map, std::string le );</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_matriz.html#ac061816cca19e509cdae979915f3da73">corredor</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_matriz.html#ac391eb8fa20b614fd6c5696deae10a10">creaMapa</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_matriz.html#a9cbc33749c71f09b59bdf510924a698f">veri</a>(std::string le);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">int</span> contador = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> nivel();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// MATRIZL_H</span></div>
+<div class="ttc" id="aclass_azul_html"><div class="ttname"><a href="class_azul.html">Azul</a></div><div class="ttdoc">The Azul class clase del fantasma azul.</div><div class="ttdef"><b>Definition:</b> FantasmaA.h:19</div></div>
+<div class="ttc" id="aclass_matriz_html"><div class="ttname"><a href="class_matriz.html">Matriz</a></div><div class="ttdoc">The Matriz class clase para el mapa.</div><div class="ttdef"><b>Definition:</b> MatrizL.h:28</div></div>
+<div class="ttc" id="aclass_matriz_html_a2092b7a289ecec369e1da407d5839f5a"><div class="ttname"><a href="class_matriz.html#a2092b7a289ecec369e1da407d5839f5a">Matriz::~Matriz</a></div><div class="ttdeci">~Matriz()</div><div class="ttdoc">Matriz::~Matriz Borra todo.</div><div class="ttdef"><b>Definition:</b> MatrizL.cpp:30</div></div>
+<div class="ttc" id="aclass_matriz_html_a2d8089c18677a674d7f2101035d60004"><div class="ttname"><a href="class_matriz.html#a2d8089c18677a674d7f2101035d60004">Matriz::lectorLineas</a></div><div class="ttdeci">void lectorLineas(int *map, std::string le)</div><div class="ttdoc">Matriz::lectorLineas Lee las lineas de la matriz.</div><div class="ttdef"><b>Definition:</b> MatrizL.cpp:94</div></div>
+<div class="ttc" id="aclass_matriz_html_a3894c2079c08ab651208bf6b730a6c05"><div class="ttname"><a href="class_matriz.html#a3894c2079c08ab651208bf6b730a6c05">Matriz::Matriz</a></div><div class="ttdeci">Matriz(char *file_name)</div><div class="ttdoc">Matriz::Matriz Se usa para abrir la matriz desde el txt.</div><div class="ttdef"><b>Definition:</b> MatrizL.cpp:129</div></div>
 <div class="ttc" id="aclass_matriz_html_a9cbc33749c71f09b59bdf510924a698f"><div class="ttname"><a href="class_matriz.html#a9cbc33749c71f09b59bdf510924a698f">Matriz::veri</a></div><div class="ttdeci">int veri(std::string le)</div><div class="ttdoc">Matriz::veri Se encarga de verificar que exista la matriz.</div><div class="ttdef"><b>Definition:</b> MatrizL.cpp:12</div></div>
-<div class="ttc" id="aclass_naranja_html"><div class="ttname"><a href="class_naranja.html">Naranja</a></div><div class="ttdef"><b>Definition:</b> FantasmaN.h:14</div></div>
-<div class="ttc" id="aclass_pac_man_html"><div class="ttname"><a href="class_pac_man.html">PacMan</a></div><div class="ttdef"><b>Definition:</b> Pacman.h:11</div></div>
-<div class="ttc" id="aclass_rojo_html"><div class="ttname"><a href="class_rojo.html">Rojo</a></div><div class="ttdef"><b>Definition:</b> FantasmaR.h:14</div></div>
-<div class="ttc" id="aclass_rosa_html"><div class="ttname"><a href="class_rosa.html">Rosa</a></div><div class="ttdef"><b>Definition:</b> FantasmaRS.h:14</div></div>
+<div class="ttc" id="aclass_matriz_html_ac061816cca19e509cdae979915f3da73"><div class="ttname"><a href="class_matriz.html#ac061816cca19e509cdae979915f3da73">Matriz::corredor</a></div><div class="ttdeci">void corredor()</div><div class="ttdoc">Matriz::corredor Estan todos los qtimers.</div><div class="ttdef"><b>Definition:</b> MatrizL.cpp:102</div></div>
+<div class="ttc" id="aclass_matriz_html_ac391eb8fa20b614fd6c5696deae10a10"><div class="ttname"><a href="class_matriz.html#ac391eb8fa20b614fd6c5696deae10a10">Matriz::creaMapa</a></div><div class="ttdeci">void creaMapa()</div><div class="ttdoc">Matriz::creaMapa Crea mapa de la matriz.</div><div class="ttdef"><b>Definition:</b> MatrizL.cpp:59</div></div>
+<div class="ttc" id="aclass_naranja_html"><div class="ttname"><a href="class_naranja.html">Naranja</a></div><div class="ttdoc">The Naranja class clase del fantasma naranja.</div><div class="ttdef"><b>Definition:</b> FantasmaN.h:19</div></div>
+<div class="ttc" id="aclass_pac_man_html"><div class="ttname"><a href="class_pac_man.html">PacMan</a></div><div class="ttdoc">The PacMan class clase que se encarga de los metodos de pacman.</div><div class="ttdef"><b>Definition:</b> Pacman.h:15</div></div>
+<div class="ttc" id="aclass_rojo_html"><div class="ttname"><a href="class_rojo.html">Rojo</a></div><div class="ttdoc">The Rojo class clase del fantasma rojo.</div><div class="ttdef"><b>Definition:</b> FantasmaR.h:18</div></div>
+<div class="ttc" id="aclass_rosa_html"><div class="ttname"><a href="class_rosa.html">Rosa</a></div><div class="ttdoc">The Rosa class clase para el fantasma rosa.</div><div class="ttdef"><b>Definition:</b> FantasmaRS.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

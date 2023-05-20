@@ -7,7 +7,10 @@
 #include <QGraphicsPixmapItem>
 #include <unistd.h>
 
-
+/**
+ * @brief The PacMan class
+ * clase que se encarga de los metodos de pacman
+ */
 class   PacMan : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
@@ -25,6 +28,7 @@ private:
     int scared;
     int counter;
     int score;
+
     //int points;
 public:
     PacMan(int **map_int, QGraphicsPixmapItem **map_pix, QGraphicsScene *scene);
@@ -45,7 +49,12 @@ public:
     int points;
     int nivel();
     int contador=1;
+    int numero;
+
+
+    //socket
     void SocketServer();
+
 
 public slots:
     void    move();

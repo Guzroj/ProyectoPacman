@@ -77,37 +77,39 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">class       </span><a class="code" href="class_rosa.html">Rosa</a>;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">class       </span><a class="code" href="class_naranja.html">Naranja</a>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_azul.html">   13</a></span>&#160;<span class="keyword">class       </span><a class="code" href="class_azul.html">Azul</a> : <span class="keyword">public</span> <a class="code" href="class_fantasma.html">Fantasma</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_rojo.html">Rojo</a>      *rojo;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_naranja.html">Naranja</a>   *naranja;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_rosa.html">Rosa</a>      *rosa;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_azul.html#a27d5f86b500f5af96bb2a4e90cb5549f">set_default</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_azul.html#aa81f9dc2f394821b5fe4c7edd39b227d">calculate_point</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_azul.html#a823441285bca292e7d4875e64afa4a8c">find_pacman</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_azul.html#add10abb4857559718bec493223f3e481">set_friends</a>(<a class="code" href="class_rojo.html">Rojo</a> *bl, <a class="code" href="class_rosa.html">Rosa</a> *pnc, <a class="code" href="class_naranja.html">Naranja</a> *cld);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_azul.html#aa02881a573832b58dff70cb59e48dd10">find_path</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <a class="code" href="class_azul.html">Azul</a>(QGraphicsScene *sc, <span class="keywordtype">int</span> **map, <a class="code" href="class_pac_man.html">PacMan</a> *pc);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_azul.html#aa117e836b0f5b6afb0b006a1998ecfdc">move_f</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// FANTASMAA_H</span></div>
-<div class="ttc" id="aclass_azul_html"><div class="ttname"><a href="class_azul.html">Azul</a></div><div class="ttdef"><b>Definition:</b> FantasmaA.h:14</div></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_azul.html">   18</a></span>&#160;<span class="keyword">class       </span><a class="code" href="class_azul.html">Azul</a> : <span class="keyword">public</span> <a class="code" href="class_fantasma.html">Fantasma</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_rojo.html">Rojo</a>      *rojo;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_naranja.html">Naranja</a>   *naranja;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_rosa.html">Rosa</a>      *rosa;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_azul.html#a27d5f86b500f5af96bb2a4e90cb5549f">set_default</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_azul.html#aa81f9dc2f394821b5fe4c7edd39b227d">calculate_point</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_azul.html#a823441285bca292e7d4875e64afa4a8c">find_pacman</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_azul.html#add10abb4857559718bec493223f3e481">set_friends</a>(<a class="code" href="class_rojo.html">Rojo</a> *bl, <a class="code" href="class_rosa.html">Rosa</a> *pnc, <a class="code" href="class_naranja.html">Naranja</a> *cld);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_azul.html#aa02881a573832b58dff70cb59e48dd10">find_path</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <a class="code" href="class_azul.html">Azul</a>(QGraphicsScene *sc, <span class="keywordtype">int</span> **map, <a class="code" href="class_pac_man.html">PacMan</a> *pc);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_azul.html#aa117e836b0f5b6afb0b006a1998ecfdc">move_f</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// FANTASMAA_H</span></div>
+<div class="ttc" id="aclass_azul_html"><div class="ttname"><a href="class_azul.html">Azul</a></div><div class="ttdoc">The Azul class clase del fantasma azul.</div><div class="ttdef"><b>Definition:</b> FantasmaA.h:19</div></div>
 <div class="ttc" id="aclass_azul_html_a27d5f86b500f5af96bb2a4e90cb5549f"><div class="ttname"><a href="class_azul.html#a27d5f86b500f5af96bb2a4e90cb5549f">Azul::set_default</a></div><div class="ttdeci">void set_default()</div><div class="ttdoc">Azul::set_default Define la posicion del fantasma.</div><div class="ttdef"><b>Definition:</b> FantasmaA.cpp:114</div></div>
 <div class="ttc" id="aclass_azul_html_a823441285bca292e7d4875e64afa4a8c"><div class="ttname"><a href="class_azul.html#a823441285bca292e7d4875e64afa4a8c">Azul::find_pacman</a></div><div class="ttdeci">void find_pacman()</div><div class="ttdoc">Azul::find_pacman Se encarga de buscar el pacman.</div><div class="ttdef"><b>Definition:</b> FantasmaA.cpp:29</div></div>
 <div class="ttc" id="aclass_azul_html_aa02881a573832b58dff70cb59e48dd10"><div class="ttname"><a href="class_azul.html#aa02881a573832b58dff70cb59e48dd10">Azul::find_path</a></div><div class="ttdeci">void find_path()</div><div class="ttdoc">Azul::find_path Busca el camino hacia pacman.</div><div class="ttdef"><b>Definition:</b> FantasmaA.cpp:66</div></div>
 <div class="ttc" id="aclass_azul_html_aa117e836b0f5b6afb0b006a1998ecfdc"><div class="ttname"><a href="class_azul.html#aa117e836b0f5b6afb0b006a1998ecfdc">Azul::move_f</a></div><div class="ttdeci">void move_f()</div><div class="ttdoc">Azul::move_f Es un slot que permite el movimiento de los fantasmas.</div><div class="ttdef"><b>Definition:</b> FantasmaA.cpp:197</div></div>
 <div class="ttc" id="aclass_azul_html_aa81f9dc2f394821b5fe4c7edd39b227d"><div class="ttname"><a href="class_azul.html#aa81f9dc2f394821b5fe4c7edd39b227d">Azul::calculate_point</a></div><div class="ttdeci">void calculate_point()</div><div class="ttdoc">Azul::calculate_point Calcula la ruta hacia el pacman.</div><div class="ttdef"><b>Definition:</b> FantasmaA.cpp:128</div></div>
 <div class="ttc" id="aclass_azul_html_add10abb4857559718bec493223f3e481"><div class="ttname"><a href="class_azul.html#add10abb4857559718bec493223f3e481">Azul::set_friends</a></div><div class="ttdeci">void set_friends(Rojo *bl, Rosa *pnc, Naranja *cld)</div><div class="ttdoc">Azul::set_friends Define la posicion en donde estan los otros fantasmas para evitar choques entre ell...</div><div class="ttdef"><b>Definition:</b> FantasmaA.cpp:187</div></div>
-<div class="ttc" id="aclass_fantasma_html"><div class="ttname"><a href="class_fantasma.html">Fantasma</a></div><div class="ttdef"><b>Definition:</b> fantasma.h:10</div></div>
-<div class="ttc" id="aclass_naranja_html"><div class="ttname"><a href="class_naranja.html">Naranja</a></div><div class="ttdef"><b>Definition:</b> FantasmaN.h:14</div></div>
-<div class="ttc" id="aclass_pac_man_html"><div class="ttname"><a href="class_pac_man.html">PacMan</a></div><div class="ttdef"><b>Definition:</b> Pacman.h:11</div></div>
-<div class="ttc" id="aclass_rojo_html"><div class="ttname"><a href="class_rojo.html">Rojo</a></div><div class="ttdef"><b>Definition:</b> FantasmaR.h:14</div></div>
-<div class="ttc" id="aclass_rosa_html"><div class="ttname"><a href="class_rosa.html">Rosa</a></div><div class="ttdef"><b>Definition:</b> FantasmaRS.h:14</div></div>
+<div class="ttc" id="aclass_fantasma_html"><div class="ttname"><a href="class_fantasma.html">Fantasma</a></div><div class="ttdoc">The Fantasma class es la clase padre de los demas fantasmas.</div><div class="ttdef"><b>Definition:</b> fantasma.h:13</div></div>
+<div class="ttc" id="aclass_naranja_html"><div class="ttname"><a href="class_naranja.html">Naranja</a></div><div class="ttdoc">The Naranja class clase del fantasma naranja.</div><div class="ttdef"><b>Definition:</b> FantasmaN.h:19</div></div>
+<div class="ttc" id="aclass_pac_man_html"><div class="ttname"><a href="class_pac_man.html">PacMan</a></div><div class="ttdoc">The PacMan class clase que se encarga de los metodos de pacman.</div><div class="ttdef"><b>Definition:</b> Pacman.h:15</div></div>
+<div class="ttc" id="aclass_rojo_html"><div class="ttname"><a href="class_rojo.html">Rojo</a></div><div class="ttdoc">The Rojo class clase del fantasma rojo.</div><div class="ttdef"><b>Definition:</b> FantasmaR.h:18</div></div>
+<div class="ttc" id="aclass_rosa_html"><div class="ttname"><a href="class_rosa.html">Rosa</a></div><div class="ttdoc">The Rosa class clase para el fantasma rosa.</div><div class="ttdef"><b>Definition:</b> FantasmaRS.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

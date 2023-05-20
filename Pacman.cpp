@@ -57,7 +57,11 @@ void    PacMan::refrescar()
         scene->removeItem(&(map_pix[i_pos][j_pos]));
     }
 }
-
+/**
+ * @brief PacMan::nivel
+ * Aumenta el nivel del juego
+ * @return la variable contador aumentada
+ */
 int PacMan::nivel(){
     contador++;
     return contador;
@@ -162,10 +166,9 @@ int     PacMan::get_direction()
  * @param event
  */
 
-void    PacMan::keyPressEvent(QKeyEvent *event)
-{
-    if (event->key() == Qt::Key_Left)
-    {
+void    PacMan::keyPressEvent(QKeyEvent *event){
+
+    if (event->key() == Qt::Key_Left){
         this->direction = 3;
         this->setPixmap(QPixmap(":/Imagenes/Izquierda.png"));
     }
@@ -185,7 +188,11 @@ void    PacMan::keyPressEvent(QKeyEvent *event)
         this->setPixmap(QPixmap(":/Imagenes/Arriba.png"));
     }
 }
-
+/**
+ * @brief PacMan::get_point
+ * Obtiene la cantidad de puntos
+ * @return
+ */
 int     PacMan::get_point()
 {
     return (points);
@@ -250,19 +257,27 @@ void PacMan::SocketServer() {
         // Procesar mensajes entrantes
         char buffer[1024] = {0};
     int valread = read(new_socket, buffer, 1024);
+    std::string mensajeRecibido(buffer); // Almacena el contenido del búfer en una variable de tipo string
 
     if (valread <= 0) {
         std::cout << "Cliente desconectado" << std::endl;
         close(new_socket);
+
+
+        // Hacer algo con el mensaje recibido
+
         return;
     }
 
-    std::cout << "Mensaje recibido: " << buffer << std::endl;
+    //std::cout << "Mensaje recibido: " << buffer << std::endl;
+    std::cout << "Mensaje recibido: " << mensajeRecibido << std::endl;
+    numero = std::stoi(mensajeRecibido); ;
 
     char respuesta[] = "Mensaje recibido.\n";
     send(new_socket, respuesta, sizeof(respuesta), 0);
     std::cout << "Respuesta: " << respuesta << std::endl;
-
+    //int numero = std::atoi(respuesta); ;
+    qDebug()<<numero;
     if (close(server_fd) == -1) {
         std::cerr << "Error al cerrar el socket: " << std::strerror(errno) << std::endl;
         return;
@@ -348,6 +363,18 @@ void    PacMan::move()
         else
             if (verimove(i_pos, j_pos + 1))
                 j_pos++;
+    }
+    if (numero==1){
+        qDebug()<<"Se mueve para izquierda";
+    }
+    if (numero==-1){
+        qDebug()<<"Se mueve para la derecha";
+    }
+    if (numero==0){
+        qDebug()<<"Se mueve para la arriba";
+    }
+    if (numero==2){
+        qDebug()<<"Se mueve para abajo";
     }
     this->setPos(j_pos * 32, i_pos * 32);
 }

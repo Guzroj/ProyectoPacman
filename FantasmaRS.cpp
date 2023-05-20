@@ -1,5 +1,8 @@
 #include "FantasmaRS.h"
-
+/**
+ * @brief Rosa::find_path
+ * encuentra la ruta mas cercana
+ */
 void        Rosa::find_path()
 {
     int i;
@@ -45,6 +48,15 @@ void        Rosa::find_path()
     map_path[azul->get_i_pos()][azul->get_j_pos()] = 0;
 }
 
+/**
+ * @brief Rosa::Rosa
+ * crea el objeto Rosa
+ * @param sc
+ * @param map
+ * se obtiene el mapa
+ * @param pc
+ * referencia a pacman
+ */
 Rosa::Rosa(QGraphicsScene *sc, int **map, PacMan *pc) : Fantasma()
 {
     scene = sc;
@@ -100,6 +112,11 @@ Rosa::Rosa(QGraphicsScene *sc, int **map, PacMan *pc) : Fantasma()
     set_direction();
     clear_map();
 }*/
+
+/**
+ * @brief Rosa::find_pacman
+ * encuentra a pacman y la ruta hacia el
+ */
 void Rosa::find_pacman()
 {
     d = 0;
@@ -144,7 +161,10 @@ void Rosa::find_pacman()
     clear_map();
 }
 
-
+/**
+ * @brief Rosa::set_default
+ * define la posicion inicial del fantasma
+ */
 void        Rosa::set_default()
 {
     i_pos = 9;
@@ -156,6 +176,10 @@ void        Rosa::set_default()
     this->setPos(j_pos * 32, i_pos * 32);
 }
 
+/**
+ * @brief Rosa::calculate_point
+ * calcula la distancia y el punto de pacman
+ */
 void        Rosa::calculate_point()
 {
     int direction;
@@ -208,6 +232,16 @@ void        Rosa::calculate_point()
     }
 }
 
+/**
+ * @brief Rosa::set_friends
+ * reconoce los demas fantasmas para ubicarse bien
+ * @param bl
+ * referencia al fantasma rojo
+ * @param cl
+ * referencia al fantasma naranja
+ * @param ink
+ * referencia al fantasma azul
+ */
 void        Rosa::set_friends(Rojo *bl, Naranja *cl, Azul *ink)
 {
     rojo = bl;
@@ -215,11 +249,25 @@ void        Rosa::set_friends(Rojo *bl, Naranja *cl, Azul *ink)
     azul = ink;
 }
 
+/**
+ * @brief Rosa::check_solution
+ * verifica la solucion encontrada
+ * @return
+ * retorna la ubicacion de la solucion
+ */
+
 bool Rosa::check_solution()
 {
     return (i_pos == i_exit && j_pos == j_exit);
 }
 
+
+/**
+ * @brief Rosa::backtrack
+ * realiza la busqueda utilizando backtracking
+ * @return
+ * regresa el resultado de utilizar el backtracking
+ */
 bool Rosa::backtrack()
 {
     if (check_solution()) {
@@ -297,6 +345,10 @@ bool Rosa::backtrack()
     return false;  // No se encontró ninguna solución desde esta posición
 }
 
+/**
+ * @brief Rosa::activate_backtracking
+ * verifica si hay que activar backtracking
+ */
 void Rosa::activate_backtracking()
 {
     backtracking_active = true;
@@ -333,6 +385,11 @@ void Rosa::activate_backtracking()
     }
 }*/
 
+
+/**
+ * @brief Rosa::move_f
+ * Se encarga de mover al fantasma, determina si se debe utilizar el algoritmo de busqueda por amplitud o backtracking
+ */
 void Rosa::move_f()
 {
     if (pacman->get_point() >= 40)

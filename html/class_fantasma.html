@@ -64,22 +64,28 @@ $(function() {
   <div class="summary">
 <a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_fantasma-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Fantasma Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="class_fantasma.html" title="The Fantasma class es la clase padre de los demas fantasmas.">Fantasma</a> class es la clase padre de los demas fantasmas.  
+ <a href="class_fantasma.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="fantasma_8h_source.html">fantasma.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Fantasma:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_fantasma__inherit__graph.png" border="0" usemap="#a_fantasma_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_fantasma_inherit__map" id="a_fantasma_inherit__map">
-<area shape="rect" title=" " alt="" coords="117,80,203,107"/>
-<area shape="rect" href="class_azul.html" title=" " alt="" coords="5,155,56,181"/>
-<area shape="rect" href="class_naranja.html" title=" " alt="" coords="81,155,154,181"/>
-<area shape="rect" href="class_rojo.html" title=" " alt="" coords="179,155,229,181"/>
-<area shape="rect" href="class_rosa.html" title=" " alt="" coords="254,155,309,181"/>
+<area shape="rect" title="The Fantasma class es la clase padre de los demas fantasmas." alt="" coords="117,80,203,107"/>
+<area shape="rect" href="class_azul.html" title="The Azul class clase del fantasma azul." alt="" coords="5,155,56,181"/>
+<area shape="rect" href="class_naranja.html" title="The Naranja class clase del fantasma naranja." alt="" coords="81,155,154,181"/>
+<area shape="rect" href="class_rojo.html" title="The Rojo class clase del fantasma rojo." alt="" coords="179,155,229,181"/>
+<area shape="rect" href="class_rosa.html" title="The Rosa class clase para el fantasma rosa." alt="" coords="254,155,309,181"/>
 <area shape="rect" title=" " alt="" coords="51,5,125,32"/>
 <area shape="rect" title=" " alt="" coords="149,5,317,32"/>
 </map>
@@ -89,10 +95,10 @@ Collaboration diagram for Fantasma:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_fantasma__coll__graph.png" border="0" usemap="#a_fantasma_coll__map" alt="Collaboration graph"/></div>
 <map name="a_fantasma_coll__map" id="a_fantasma_coll__map">
-<area shape="rect" title=" " alt="" coords="71,171,151,197"/>
-<area shape="rect" title=" " alt="" coords="5,5,76,32"/>
-<area shape="rect" href="class_pac_man.html" title=" " alt="" coords="76,81,147,108"/>
-<area shape="rect" title=" " alt="" coords="105,5,259,32"/>
+<area shape="rect" title="The Fantasma class es la clase padre de los demas fantasmas." alt="" coords="68,171,153,197"/>
+<area shape="rect" title=" " alt="" coords="5,5,80,32"/>
+<area shape="rect" href="class_pac_man.html" title="The PacMan class clase que se encarga de los metodos de pacman." alt="" coords="79,81,151,108"/>
+<area shape="rect" title=" " alt="" coords="104,5,272,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -140,6 +146,15 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>set_default</
 <tr class="memitem:a7f193dc57ebd667990903f579a8053a5"><td class="memItemLeft" align="right" valign="top"><a id="a7f193dc57ebd667990903f579a8053a5"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>calculate_point</b> ()=0</td></tr>
 <tr class="separator:a7f193dc57ebd667990903f579a8053a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12a11ca65debcfa800b8cbde5e592f52"><td class="memItemLeft" align="right" valign="top"><a id="a12a11ca65debcfa800b8cbde5e592f52"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>nivel</b> ()</td></tr>
+<tr class="separator:a12a11ca65debcfa800b8cbde5e592f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a3c7e17051601be114af4537e1351b669"><td class="memItemLeft" align="right" valign="top"><a id="a3c7e17051601be114af4537e1351b669"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>contador</b> = 0</td></tr>
+<tr class="separator:a3c7e17051601be114af4537e1351b669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -186,7 +201,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>y_dir</b> [4] = { 0, 0
 QGraphicsScene *&#160;</td><td class="memItemRight" valign="bottom"><b>scene</b></td></tr>
 <tr class="separator:a16fb80fe1c8eb64c717b03bb03bd5096"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_fantasma.html" title="The Fantasma class es la clase padre de los demas fantasmas.">Fantasma</a> class es la clase padre de los demas fantasmas. </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="fantasma_8h_source.html">fantasma.h</a></li>
 <li>fantasma.cpp</li>
 </ul>

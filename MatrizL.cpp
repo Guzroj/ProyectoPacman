@@ -23,7 +23,10 @@ int Matriz::veri(std::string le){
 }
 
 
-
+/**
+ * @brief Matriz::~Matriz
+ * Borra todo
+ */
 Matriz::~Matriz(){
     delete scene;
     delete view;
@@ -49,7 +52,10 @@ Matriz::~Matriz(){
     delete []map_int;
 }
 
-
+/**
+ * @brief Matriz::creaMapa
+ * Crea mapa de la matriz
+ */
 void Matriz::creaMapa(){
     for (int i = 0; i < size_x; i++)
     {
@@ -77,11 +83,22 @@ void Matriz::creaMapa(){
     }
 
 }
+/**
+ * @brief Matriz::lectorLineas
+ * Lee las lineas de la matriz
+ * @param map
+ * Es la matriz dinamica
+ * @param le
+ * Es un string de la fila
+ */
 void Matriz::lectorLineas(int *map, std::string le){
     for (int i = 0; i < size_y; i++)
         map[i] = le[i] - '0';
 }
-
+/**
+ * @brief Matriz::corredor
+ * Estan todos los qtimers
+ */
 void Matriz::corredor(){
 
     timer_pacman = new QTimer();
@@ -103,7 +120,12 @@ void Matriz::corredor(){
 
 }
 
-
+/**
+ * @brief Matriz::Matriz
+ * Se usa para abrir la matriz desde el txt
+ * @param file_name
+ * Es nuestro map.txt
+ */
 Matriz::Matriz(char *file_name){
     std::ifstream   input;
     std::string     temp;

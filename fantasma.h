@@ -5,7 +5,10 @@
 #define size_y 19
 
 #include "Pacman.h"
-
+/**
+ * @brief The Fantasma class
+ * es la clase padre de los demas fantasmas
+ */
 class Fantasma :public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT

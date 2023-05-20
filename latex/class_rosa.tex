@@ -2,6 +2,15 @@
 \label{class_rosa}\index{Rosa@{Rosa}}
 
 
+The \mbox{\hyperlink{class_rosa}{Rosa}} class clase para el fantasma rosa.  
+
+
+
+
+{\ttfamily \#include $<$Fantasma\+RS.\+h$>$}
+
+
+
 Inheritance diagram for Rosa\+:
 \nopagebreak
 \begin{figure}[H]
@@ -24,30 +33,114 @@ Collaboration diagram for Rosa\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_rosa_aeeaa7f17576a1cd1c2f7d628cd50d60c}\label{class_rosa_aeeaa7f17576a1cd1c2f7d628cd50d60c}} 
-void {\bfseries move\+\_\+f} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_rosa_aeeaa7f17576a1cd1c2f7d628cd50d60c}{move\+\_\+f}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rosa_aeeaa7f17576a1cd1c2f7d628cd50d60c}{Rosa\+::move\+\_\+f}} Se encarga de mover al fantasma, determina si se debe utilizar el algoritmo de busqueda por amplitud o backtracking. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_rosa_a7db57fc4b27bca4c133addce810439b1}\label{class_rosa_a7db57fc4b27bca4c133addce810439b1}} 
-void {\bfseries set\+\_\+default} ()
-\item 
+void \mbox{\hyperlink{class_rosa_a7db57fc4b27bca4c133addce810439b1}{set\+\_\+default}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rosa_a7db57fc4b27bca4c133addce810439b1}{Rosa\+::set\+\_\+default}} define la posicion inicial del fantasma. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_rosa_a01fc9e444572b32912617c65822036f1}\label{class_rosa_a01fc9e444572b32912617c65822036f1}} 
-void {\bfseries calculate\+\_\+point} ()
-\item 
+void \mbox{\hyperlink{class_rosa_a01fc9e444572b32912617c65822036f1}{calculate\+\_\+point}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rosa_a01fc9e444572b32912617c65822036f1}{Rosa\+::calculate\+\_\+point}} calcula la distancia y el punto de pacman. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_rosa_a4b769bbae89c49fa20520418560d8f59}\label{class_rosa_a4b769bbae89c49fa20520418560d8f59}} 
-void {\bfseries find\+\_\+pacman} ()
-\item 
-\mbox{\Hypertarget{class_rosa_a9958079173986ccd2c5d09a3fa6cb20e}\label{class_rosa_a9958079173986ccd2c5d09a3fa6cb20e}} 
-void {\bfseries set\+\_\+friends} (\mbox{\hyperlink{class_rojo}{Rojo}} $\ast$bl, \mbox{\hyperlink{class_naranja}{Naranja}} $\ast$cl, \mbox{\hyperlink{class_azul}{Azul}} $\ast$ink)
-\item 
+void \mbox{\hyperlink{class_rosa_a4b769bbae89c49fa20520418560d8f59}{find\+\_\+pacman}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rosa_a4b769bbae89c49fa20520418560d8f59}{Rosa\+::find\+\_\+pacman}} encuentra a pacman y la ruta hacia el. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rosa_a9958079173986ccd2c5d09a3fa6cb20e}{set\+\_\+friends}} (\mbox{\hyperlink{class_rojo}{Rojo}} $\ast$bl, \mbox{\hyperlink{class_naranja}{Naranja}} $\ast$cl, \mbox{\hyperlink{class_azul}{Azul}} $\ast$ink)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rosa_a9958079173986ccd2c5d09a3fa6cb20e}{Rosa\+::set\+\_\+friends}} reconoce los demas fantasmas para ubicarse bien. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_rosa_a35650075b49731bd2c0b8b5b3e6260d5}\label{class_rosa_a35650075b49731bd2c0b8b5b3e6260d5}} 
-void {\bfseries find\+\_\+path} ()
+void \mbox{\hyperlink{class_rosa_a35650075b49731bd2c0b8b5b3e6260d5}{find\+\_\+path}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rosa_a35650075b49731bd2c0b8b5b3e6260d5}{Rosa\+::find\+\_\+path}} encuentra la ruta mas cercana. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_rosa_ad2377a2489823e00bcefb40b5a1cf140}{Rosa}} (QGraphics\+Scene $\ast$sc, int $\ast$$\ast$map, \mbox{\hyperlink{class_pac_man}{Pac\+Man}} $\ast$pc)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rosa_ad2377a2489823e00bcefb40b5a1cf140}{Rosa\+::\+Rosa}} crea el objeto \mbox{\hyperlink{class_rosa}{Rosa}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rosa_aceffde029452f908e32a98fdb276bd95}\label{class_rosa_aceffde029452f908e32a98fdb276bd95}} 
+void \mbox{\hyperlink{class_rosa_aceffde029452f908e32a98fdb276bd95}{activate\+\_\+backtracking}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rosa_aceffde029452f908e32a98fdb276bd95}{Rosa\+::activate\+\_\+backtracking}} verifica si hay que activar backtracking. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_rosa_aaaccd56bfc92a52d343a1a226186678d}{check\+\_\+solution}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rosa_aaaccd56bfc92a52d343a1a226186678d}{Rosa\+::check\+\_\+solution}} verifica la solucion encontrada. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_rosa_acdef6cbed07daad342f70380dcca8778}{backtrack}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rosa_acdef6cbed07daad342f70380dcca8778}{Rosa\+::backtrack}} realiza la busqueda utilizando backtracking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_rosa_ad2377a2489823e00bcefb40b5a1cf140}\label{class_rosa_ad2377a2489823e00bcefb40b5a1cf140}} 
-{\bfseries Rosa} (QGraphics\+Scene $\ast$sc, int $\ast$$\ast$map, \mbox{\hyperlink{class_pac_man}{Pac\+Man}} $\ast$pc)
+\mbox{\Hypertarget{class_rosa_ae8704128a5d8dfbbfb7154556d66db47}\label{class_rosa_ae8704128a5d8dfbbfb7154556d66db47}} 
+bool {\bfseries backtracking\+\_\+active} = false
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_rosa}{Rosa}} class clase para el fantasma rosa. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_rosa_ad2377a2489823e00bcefb40b5a1cf140}\label{class_rosa_ad2377a2489823e00bcefb40b5a1cf140}} 
+\index{Rosa@{Rosa}!Rosa@{Rosa}}
+\index{Rosa@{Rosa}!Rosa@{Rosa}}
+\doxysubsubsection{\texorpdfstring{Rosa()}{Rosa()}}
+{\footnotesize\ttfamily Rosa\+::\+Rosa (\begin{DoxyParamCaption}\item[{QGraphics\+Scene $\ast$}]{sc,  }\item[{int $\ast$$\ast$}]{map,  }\item[{\mbox{\hyperlink{class_pac_man}{Pac\+Man}} $\ast$}]{pc }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_rosa_ad2377a2489823e00bcefb40b5a1cf140}{Rosa\+::\+Rosa}} crea el objeto \mbox{\hyperlink{class_rosa}{Rosa}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sc} & \\
+\hline
+{\em map} & se obtiene el mapa \\
+\hline
+{\em pc} & referencia a pacman \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rosa_acdef6cbed07daad342f70380dcca8778}\label{class_rosa_acdef6cbed07daad342f70380dcca8778}} 
+\index{Rosa@{Rosa}!backtrack@{backtrack}}
+\index{backtrack@{backtrack}!Rosa@{Rosa}}
+\doxysubsubsection{\texorpdfstring{backtrack()}{backtrack()}}
+{\footnotesize\ttfamily bool Rosa\+::backtrack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_rosa_acdef6cbed07daad342f70380dcca8778}{Rosa\+::backtrack}} realiza la busqueda utilizando backtracking. 
+
+\begin{DoxyReturn}{Returns}
+regresa el resultado de utilizar el backtracking 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_rosa_aaaccd56bfc92a52d343a1a226186678d}\label{class_rosa_aaaccd56bfc92a52d343a1a226186678d}} 
+\index{Rosa@{Rosa}!check\_solution@{check\_solution}}
+\index{check\_solution@{check\_solution}!Rosa@{Rosa}}
+\doxysubsubsection{\texorpdfstring{check\_solution()}{check\_solution()}}
+{\footnotesize\ttfamily bool Rosa\+::check\+\_\+solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_rosa_aaaccd56bfc92a52d343a1a226186678d}{Rosa\+::check\+\_\+solution}} verifica la solucion encontrada. 
+
+\begin{DoxyReturn}{Returns}
+retorna la ubicacion de la solucion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_rosa_a9958079173986ccd2c5d09a3fa6cb20e}\label{class_rosa_a9958079173986ccd2c5d09a3fa6cb20e}} 
+\index{Rosa@{Rosa}!set\_friends@{set\_friends}}
+\index{set\_friends@{set\_friends}!Rosa@{Rosa}}
+\doxysubsubsection{\texorpdfstring{set\_friends()}{set\_friends()}}
+{\footnotesize\ttfamily void Rosa\+::set\+\_\+friends (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_rojo}{Rojo}} $\ast$}]{bl,  }\item[{\mbox{\hyperlink{class_naranja}{Naranja}} $\ast$}]{cl,  }\item[{\mbox{\hyperlink{class_azul}{Azul}} $\ast$}]{ink }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_rosa_a9958079173986ccd2c5d09a3fa6cb20e}{Rosa\+::set\+\_\+friends}} reconoce los demas fantasmas para ubicarse bien. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bl} & referencia al fantasma rojo \\
+\hline
+{\em cl} & referencia al fantasma naranja \\
+\hline
+{\em ink} & referencia al fantasma azul \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

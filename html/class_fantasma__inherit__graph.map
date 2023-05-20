@@ -1,9 +1,9 @@
 <map id="Fantasma" name="Fantasma">
-<area shape="rect" id="node1" title=" " alt="" coords="117,80,203,107"/>
-<area shape="rect" id="node4" href="$class_azul.html" title=" " alt="" coords="5,155,56,181"/>
-<area shape="rect" id="node5" href="$class_naranja.html" title=" " alt="" coords="81,155,154,181"/>
-<area shape="rect" id="node6" href="$class_rojo.html" title=" " alt="" coords="179,155,229,181"/>
-<area shape="rect" id="node7" href="$class_rosa.html" title=" " alt="" coords="254,155,309,181"/>
+<area shape="rect" id="node1" title="The Fantasma class es la clase padre de los demas fantasmas." alt="" coords="117,80,203,107"/>
+<area shape="rect" id="node4" href="$class_azul.html" title="The Azul class clase del fantasma azul." alt="" coords="5,155,56,181"/>
+<area shape="rect" id="node5" href="$class_naranja.html" title="The Naranja class clase del fantasma naranja." alt="" coords="81,155,154,181"/>
+<area shape="rect" id="node6" href="$class_rojo.html" title="The Rojo class clase del fantasma rojo." alt="" coords="179,155,229,181"/>
+<area shape="rect" id="node7" href="$class_rosa.html" title="The Rosa class clase para el fantasma rosa." alt="" coords="254,155,309,181"/>
 <area shape="rect" id="node2" title=" " alt="" coords="51,5,125,32"/>
 <area shape="rect" id="node3" title=" " alt="" coords="149,5,317,32"/>
 </map>

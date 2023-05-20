@@ -77,31 +77,49 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">class </span><a class="code" href="class_azul.html">Azul</a>;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">class </span><a class="code" href="class_rojo.html">Rojo</a>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_rosa.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_rosa.html">Rosa</a> : <span class="keyword">public</span> <a class="code" href="class_fantasma.html">Fantasma</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_naranja.html">Naranja</a> *naranja;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_azul.html">Azul</a>    *azul;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_rojo.html">Rojo</a>    *rojo;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span>    set_default();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span>    calculate_point();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span>    find_pacman();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span>    set_friends(<a class="code" href="class_rojo.html">Rojo</a> *bl, <a class="code" href="class_naranja.html">Naranja</a> *cl, <a class="code" href="class_azul.html">Azul</a> *ink);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span>    find_path();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_rosa.html">Rosa</a>(QGraphicsScene *sc, <span class="keywordtype">int</span> **map, <a class="code" href="class_pac_man.html">PacMan</a> *pc);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span>    move_f();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// FANTASMARS_H</span></div>
-<div class="ttc" id="aclass_azul_html"><div class="ttname"><a href="class_azul.html">Azul</a></div><div class="ttdef"><b>Definition:</b> FantasmaA.h:14</div></div>
-<div class="ttc" id="aclass_fantasma_html"><div class="ttname"><a href="class_fantasma.html">Fantasma</a></div><div class="ttdef"><b>Definition:</b> fantasma.h:10</div></div>
-<div class="ttc" id="aclass_naranja_html"><div class="ttname"><a href="class_naranja.html">Naranja</a></div><div class="ttdef"><b>Definition:</b> FantasmaN.h:14</div></div>
-<div class="ttc" id="aclass_pac_man_html"><div class="ttname"><a href="class_pac_man.html">PacMan</a></div><div class="ttdef"><b>Definition:</b> Pacman.h:11</div></div>
-<div class="ttc" id="aclass_rojo_html"><div class="ttname"><a href="class_rojo.html">Rojo</a></div><div class="ttdef"><b>Definition:</b> FantasmaR.h:14</div></div>
-<div class="ttc" id="aclass_rosa_html"><div class="ttname"><a href="class_rosa.html">Rosa</a></div><div class="ttdef"><b>Definition:</b> FantasmaRS.h:14</div></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_rosa.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_rosa.html">Rosa</a> : <span class="keyword">public</span> <a class="code" href="class_fantasma.html">Fantasma</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_naranja.html">Naranja</a> *naranja;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_azul.html">Azul</a>    *azul;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_rojo.html">Rojo</a>    *rojo;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_rosa.html#a7db57fc4b27bca4c133addce810439b1">set_default</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_rosa.html#a01fc9e444572b32912617c65822036f1">calculate_point</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_rosa.html#a4b769bbae89c49fa20520418560d8f59">find_pacman</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_rosa.html#a9958079173986ccd2c5d09a3fa6cb20e">set_friends</a>(<a class="code" href="class_rojo.html">Rojo</a> *bl, <a class="code" href="class_naranja.html">Naranja</a> *cl, <a class="code" href="class_azul.html">Azul</a> *ink);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_rosa.html#a35650075b49731bd2c0b8b5b3e6260d5">find_path</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <a class="code" href="class_rosa.html#ad2377a2489823e00bcefb40b5a1cf140">Rosa</a>(QGraphicsScene *sc, <span class="keywordtype">int</span> **map, <a class="code" href="class_pac_man.html">PacMan</a> *pc);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;   <span class="comment">//para hacer el back del fantasma rosado</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;   <span class="keywordtype">bool</span>     backtracking_active = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;   <span class="keywordtype">void</span>     <a class="code" href="class_rosa.html#aceffde029452f908e32a98fdb276bd95">activate_backtracking</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;   <span class="keywordtype">bool</span>     <a class="code" href="class_rosa.html#aaaccd56bfc92a52d343a1a226186678d">check_solution</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;   <span class="keywordtype">bool</span>     <a class="code" href="class_rosa.html#acdef6cbed07daad342f70380dcca8778">backtrack</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span>    <a class="code" href="class_rosa.html#aeeaa7f17576a1cd1c2f7d628cd50d60c">move_f</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// FANTASMARS_H</span></div>
+<div class="ttc" id="aclass_azul_html"><div class="ttname"><a href="class_azul.html">Azul</a></div><div class="ttdoc">The Azul class clase del fantasma azul.</div><div class="ttdef"><b>Definition:</b> FantasmaA.h:19</div></div>
+<div class="ttc" id="aclass_fantasma_html"><div class="ttname"><a href="class_fantasma.html">Fantasma</a></div><div class="ttdoc">The Fantasma class es la clase padre de los demas fantasmas.</div><div class="ttdef"><b>Definition:</b> fantasma.h:13</div></div>
+<div class="ttc" id="aclass_naranja_html"><div class="ttname"><a href="class_naranja.html">Naranja</a></div><div class="ttdoc">The Naranja class clase del fantasma naranja.</div><div class="ttdef"><b>Definition:</b> FantasmaN.h:19</div></div>
+<div class="ttc" id="aclass_pac_man_html"><div class="ttname"><a href="class_pac_man.html">PacMan</a></div><div class="ttdoc">The PacMan class clase que se encarga de los metodos de pacman.</div><div class="ttdef"><b>Definition:</b> Pacman.h:15</div></div>
+<div class="ttc" id="aclass_rojo_html"><div class="ttname"><a href="class_rojo.html">Rojo</a></div><div class="ttdoc">The Rojo class clase del fantasma rojo.</div><div class="ttdef"><b>Definition:</b> FantasmaR.h:18</div></div>
+<div class="ttc" id="aclass_rosa_html"><div class="ttname"><a href="class_rosa.html">Rosa</a></div><div class="ttdoc">The Rosa class clase para el fantasma rosa.</div><div class="ttdef"><b>Definition:</b> FantasmaRS.h:18</div></div>
+<div class="ttc" id="aclass_rosa_html_a01fc9e444572b32912617c65822036f1"><div class="ttname"><a href="class_rosa.html#a01fc9e444572b32912617c65822036f1">Rosa::calculate_point</a></div><div class="ttdeci">void calculate_point()</div><div class="ttdoc">Rosa::calculate_point calcula la distancia y el punto de pacman.</div><div class="ttdef"><b>Definition:</b> FantasmaRS.cpp:183</div></div>
+<div class="ttc" id="aclass_rosa_html_a35650075b49731bd2c0b8b5b3e6260d5"><div class="ttname"><a href="class_rosa.html#a35650075b49731bd2c0b8b5b3e6260d5">Rosa::find_path</a></div><div class="ttdeci">void find_path()</div><div class="ttdoc">Rosa::find_path encuentra la ruta mas cercana.</div><div class="ttdef"><b>Definition:</b> FantasmaRS.cpp:6</div></div>
+<div class="ttc" id="aclass_rosa_html_a4b769bbae89c49fa20520418560d8f59"><div class="ttname"><a href="class_rosa.html#a4b769bbae89c49fa20520418560d8f59">Rosa::find_pacman</a></div><div class="ttdeci">void find_pacman()</div><div class="ttdoc">Rosa::find_pacman encuentra a pacman y la ruta hacia el.</div><div class="ttdef"><b>Definition:</b> FantasmaRS.cpp:120</div></div>
+<div class="ttc" id="aclass_rosa_html_a7db57fc4b27bca4c133addce810439b1"><div class="ttname"><a href="class_rosa.html#a7db57fc4b27bca4c133addce810439b1">Rosa::set_default</a></div><div class="ttdeci">void set_default()</div><div class="ttdoc">Rosa::set_default define la posicion inicial del fantasma.</div><div class="ttdef"><b>Definition:</b> FantasmaRS.cpp:168</div></div>
+<div class="ttc" id="aclass_rosa_html_a9958079173986ccd2c5d09a3fa6cb20e"><div class="ttname"><a href="class_rosa.html#a9958079173986ccd2c5d09a3fa6cb20e">Rosa::set_friends</a></div><div class="ttdeci">void set_friends(Rojo *bl, Naranja *cl, Azul *ink)</div><div class="ttdoc">Rosa::set_friends reconoce los demas fantasmas para ubicarse bien.</div><div class="ttdef"><b>Definition:</b> FantasmaRS.cpp:245</div></div>
+<div class="ttc" id="aclass_rosa_html_aaaccd56bfc92a52d343a1a226186678d"><div class="ttname"><a href="class_rosa.html#aaaccd56bfc92a52d343a1a226186678d">Rosa::check_solution</a></div><div class="ttdeci">bool check_solution()</div><div class="ttdoc">Rosa::check_solution verifica la solucion encontrada.</div><div class="ttdef"><b>Definition:</b> FantasmaRS.cpp:259</div></div>
+<div class="ttc" id="aclass_rosa_html_acdef6cbed07daad342f70380dcca8778"><div class="ttname"><a href="class_rosa.html#acdef6cbed07daad342f70380dcca8778">Rosa::backtrack</a></div><div class="ttdeci">bool backtrack()</div><div class="ttdoc">Rosa::backtrack realiza la busqueda utilizando backtracking.</div><div class="ttdef"><b>Definition:</b> FantasmaRS.cpp:271</div></div>
+<div class="ttc" id="aclass_rosa_html_aceffde029452f908e32a98fdb276bd95"><div class="ttname"><a href="class_rosa.html#aceffde029452f908e32a98fdb276bd95">Rosa::activate_backtracking</a></div><div class="ttdeci">void activate_backtracking()</div><div class="ttdoc">Rosa::activate_backtracking verifica si hay que activar backtracking.</div><div class="ttdef"><b>Definition:</b> FantasmaRS.cpp:352</div></div>
+<div class="ttc" id="aclass_rosa_html_ad2377a2489823e00bcefb40b5a1cf140"><div class="ttname"><a href="class_rosa.html#ad2377a2489823e00bcefb40b5a1cf140">Rosa::Rosa</a></div><div class="ttdeci">Rosa(QGraphicsScene *sc, int **map, PacMan *pc)</div><div class="ttdoc">Rosa::Rosa crea el objeto Rosa.</div><div class="ttdef"><b>Definition:</b> FantasmaRS.cpp:60</div></div>
+<div class="ttc" id="aclass_rosa_html_aeeaa7f17576a1cd1c2f7d628cd50d60c"><div class="ttname"><a href="class_rosa.html#aeeaa7f17576a1cd1c2f7d628cd50d60c">Rosa::move_f</a></div><div class="ttdeci">void move_f()</div><div class="ttdoc">Rosa::move_f Se encarga de mover al fantasma, determina si se debe utilizar el algoritmo de busqueda ...</div><div class="ttdef"><b>Definition:</b> FantasmaRS.cpp:393</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

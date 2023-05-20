@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['keypressevent_10',['keyPressEvent',['../class_pac_man.html#a658b7291f2cbcf5833f9ad2e9df1d490',1,'PacMan']]]
+  ['incr_5fscore_15',['incr_score',['../class_pac_man.html#aebea26c69b956dde12883c439701f750',1,'PacMan']]]
 ];

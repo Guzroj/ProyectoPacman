@@ -1,5 +1,9 @@
 #include "FantasmaR.h"
 
+/**
+ * @brief Rojo::calculate_point
+ * calcula la distancia y el punto de pacman
+ */
 void        Rojo::calculate_point()
 {
     if (!pacman->scared_state())
@@ -21,6 +25,16 @@ void        Rojo::calculate_point()
     }
 }
 
+/**
+ * @brief Rojo::Rojo
+ * reconoce los demas fantasmas para ubicarse bien
+ * @param sc
+ * referencia a scene
+ * @param map
+ * referencia al map
+ * @param pc
+ * referencia a pacman
+ */
 Rojo::Rojo(QGraphicsScene *sc, int **map, PacMan *pc) : Fantasma()
 {
     scene = sc;
@@ -160,11 +174,24 @@ void    Rojo::move_f()
 
 
 //PRUEBA IMPLEMENTACION BACKTRACKING CON EL FANTASMA ROJO
+/**
+ * @brief Rojo::check_solution
+ * verifica la solucion encontrada
+ * @return
+ * retorna la ubicacion de la solucion
+ */
 bool Rojo::check_solution()
 {
     return (i_pos == i_exit && j_pos == j_exit);
 }
 
+
+/**
+ * @brief Rojo::backtrack
+ * realiza la busqueda utilizando backtracking
+ * @return
+ * regresa el resultado de utilizar el backtracking
+ */
 bool Rojo::backtrack()
  {
     qDebug()<<"Entro a backtracking";
@@ -245,13 +272,19 @@ bool Rojo::backtrack()
 
     return false;  // No se encontró ninguna solución desde esta posición
 }
-
+ /**
+ * @brief Rojo::activate_backtracking
+ * verifica si hay que activar backtracking
+ */
 void Rojo::activate_backtracking()
 {
     backtracking_active = true;
 }
 
-
+/**
+ * @brief Rojo::find_pacman
+ * encuentra a pacman y la ruta hacia el
+ */
 void Rojo::find_pacman()
 {
     d = 0;
@@ -289,7 +322,10 @@ void Rojo::find_pacman()
     clear_map();
 }
 
-
+/**
+ * @brief Rojo::move_f
+ * Se encarga de mover al fantasma, determina si se debe utilizar el algoritmo de busqueda por amplitud o backtracking
+ */
 void Rojo::move_f()
 {
     calculate_point();
