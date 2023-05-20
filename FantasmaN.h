@@ -17,6 +17,7 @@ private:
     Rosa   *rosa;
     Azul    *azul;
     Q_OBJECT
+
 public:
     void    set_default();
     void    calculate_point();
@@ -24,6 +25,10 @@ public:
     void    set_friends(Rojo *bl, Rosa *pnc, Azul *ink);
     void    find_path();
     Naranja(QGraphicsScene *sc, int **map, PacMan *pc);
+
+    void find_path_A();
+
+
 public slots:
     void    move_f();
 };

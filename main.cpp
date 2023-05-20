@@ -116,9 +116,9 @@ int main(int argc, char *argv[])
     loop->show();
     loop->corredor();
 
-    //std::thread serverThread(SocketServer);  // Crear un hilo para ejecutar el servidor de sockets
-    //serverThread.detach();  // Desconectar el hilo principal del hilo del servidor
-
+    /*while(true){std::thread serverThread(SocketServer);  // Crear un hilo para ejecutar el servidor de sockets
+    serverThread.detach();  // Desconectar el hilo principal del hilo del servidor
+    }*/
     return a.exec();
 }
 

@@ -44,6 +44,8 @@ public:
     void corredor();
     void creaMapa();
     int veri(std::string le);
+    int contador = 0;
+    int nivel();
 
 };
 

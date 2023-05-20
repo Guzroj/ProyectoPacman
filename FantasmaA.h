@@ -23,7 +23,9 @@ public:
     void    find_pacman();
     void    set_friends(Rojo *bl, Rosa *pnc, Naranja *cld);
     void    find_path();
+
             Azul(QGraphicsScene *sc, int **map, PacMan *pc);
+
 public slots:
     void    move_f();
 };

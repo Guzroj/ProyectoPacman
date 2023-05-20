@@ -28,6 +28,7 @@ Naranja::Naranja(QGraphicsScene *sc, int **map, PacMan *pc) : Fantasma()
  */
 void        Naranja::find_pacman()
 {
+
     d = 0;
     flag = 0;
     if (!pacman->scared_state())
@@ -157,6 +158,142 @@ void        Naranja::set_friends(Rojo *bl, Rosa *pnc, Azul *ink)
     rosa = pnc;
     azul = ink;
 }
+
+struct Nodo {
+    int x;
+    int y;
+    Nodo* padre;
+    int g;
+    int h;
+    int f;
+};
+
+int calcular_heuristica(Nodo* nodo, int destino_x, int destino_y) {
+    int dx = abs(nodo->x - destino_x);
+    int dy = abs(nodo->y - destino_y);
+    return dx + dy;
+}
+
+
+void Naranja::find_path_A()
+{
+    // Creamos los nodos inicial y objetivo
+    Nodo* inicio = new Nodo();
+    inicio->x = i_pos;
+    inicio->y = j_pos;
+    inicio->padre = nullptr;
+    inicio->g = 0;
+    inicio->h = calcular_heuristica(inicio, i_exit, j_exit);
+    inicio->f = inicio->g + inicio->h;
+
+    Nodo* objetivo = new Nodo();
+    objetivo->x = i_exit;
+    objetivo->y = j_exit;
+    objetivo->padre = nullptr;
+    objetivo->g = 0;
+    objetivo->h = 0;
+    objetivo->f = 0;
+
+    // Creamos listas abierta y cerrada
+    std::vector<Nodo*> lista_abierta;
+    std::vector<Nodo*> lista_cerrada;
+
+    // Agregamos el nodo inicial a la lista abierta
+    lista_abierta.push_back(inicio);
+
+    while (!lista_abierta.empty()) {
+        // Buscamos el nodo con el menor valor de f en la lista abierta
+        Nodo* nodo_actual = lista_abierta[0];
+        int indice_actual = 0;
+        for (int i = 1; i < lista_abierta.size(); i++) {
+            if (lista_abierta[i]->f < nodo_actual->f) {
+                nodo_actual = lista_abierta[i];
+                indice_actual = i;
+            }
+        }
+
+        // Movemos el nodo actual de la lista abierta a la lista cerrada
+        lista_abierta.erase(lista_abierta.begin() + indice_actual);
+        lista_cerrada.push_back(nodo_actual);
+
+        // Verificamos si hemos alcanzado el objetivo
+        if (nodo_actual->x == objetivo->x && nodo_actual->y == objetivo->y) {
+            // Reconstruimos el camino óptimo
+            Nodo* nodo_camino = nodo_actual;
+            while (nodo_camino != nullptr) {
+                // Haz algo con el nodo_camino, como marcar el camino en el tablero
+                nodo_camino = nodo_camino->padre;
+            }
+            break;
+        }
+
+        // Generamos los sucesores del nodo actual
+        for (int i = 0; i < 4; i++) {
+            int sucesor_x = x_dir[i] + nodo_actual->x;
+            int sucesor_y = y_dir[i] + nodo_actual->y;
+
+            // Verificamos si el sucesor está dentro de los límites del tablero
+            if (sucesor_x >= 0 && sucesor_x < size_x && sucesor_y >= 0 && sucesor_y < size_y) {
+                // Verificamos si el sucesor es un obstáculo
+                if (map_path[sucesor_x][sucesor_y] != -5) {
+                    // Creamos el nodo sucesor
+                    Nodo* sucesor = new Nodo();
+                    sucesor->x = sucesor_x;
+                    sucesor->y = sucesor_y;
+                    sucesor->padre = nodo_actual;
+                    sucesor->g = nodo_actual->g + 1;
+                    sucesor->h = calcular_heuristica(sucesor, objetivo->x, objetivo->y);
+                    sucesor->f = sucesor->g + sucesor->h;
+
+                    // Verificamos si el sucesor ya está en la lista cerrada
+                    bool en_lista_cerrada = false;
+                    for (Nodo* nodo : lista_cerrada) {
+                        if (nodo->x == sucesor->x && nodo->y == sucesor->y) {
+                            en_lista_cerrada = true;
+                            break;
+                        }
+                    }
+
+                    if (!en_lista_cerrada) {
+                        // Verificamos si el sucesor ya está en la lista abierta
+                        bool en_lista_abierta = false;
+                        int indice_existente = -1;
+                        for (int j = 0; j < lista_abierta.size(); j++) {
+                            if (lista_abierta[j]->x == sucesor->x && lista_abierta[j]->y == sucesor->y) {
+                                en_lista_abierta = true;
+                                indice_existente = j;
+                                break;
+                            }
+                        }
+
+                        if (en_lista_abierta) {
+                            // Si el sucesor ya está en la lista abierta pero tiene un costo g mayor,
+                            // actualizamos su costo y su nodo padre
+                            if (sucesor->g < lista_abierta[indice_existente]->g) {
+                                lista_abierta[indice_existente]->g = sucesor->g;
+                                lista_abierta[indice_existente]->padre = nodo_actual;
+                            }
+                        } else {
+                            // Agregamos el sucesor a la lista abierta
+                            lista_abierta.push_back(sucesor);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Liberamos la memoria de los nodos
+    for (Nodo* nodo : lista_abierta) {
+        delete nodo;
+    }
+    for (Nodo* nodo : lista_cerrada) {
+        delete nodo;
+    }
+}
+
+
+
 /**
  * @brief Naranja::move_f
  * Es un slot que permite el movimiento de los fantasmas
@@ -164,7 +301,9 @@ void        Naranja::set_friends(Rojo *bl, Rosa *pnc, Azul *ink)
 void    Naranja::move_f()
 {
     if (pacman->get_point() >= 90)
+
     {
+
         find_pacman();
         if (direction == 1)
         {

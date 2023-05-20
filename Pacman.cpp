@@ -10,12 +10,14 @@
  * @brief PacMan::refrescar
  * Se encarga de refrescar los datos que recibe el pacman, es decir si se come el cherry, se come los fantasmas o come puntos
  */
+//Matriz matriz;
+//int nivel = matriz.nivel();
 
 void    PacMan::refrescar()
 {
     static int flag;
 
-    if (points == 10)
+    if (points == 20)
     {
         map_int[15][9] = 6;
         if (!flag)
@@ -39,8 +41,21 @@ void    PacMan::refrescar()
         map_int[i_pos][j_pos] = 0;
         score += 10;
         points++;
+        if (score==400)
+            nivel();
+        if (score==500)
+            nivel();
+        if (score==750)
+            nivel();
+        if (score==900)
+            nivel();
         scene->removeItem(&(map_pix[i_pos][j_pos]));
     }
+}
+
+int PacMan::nivel(){
+    contador++;
+    return contador;
 }
 /**
  * @brief PacMan::scared_state
@@ -74,9 +89,10 @@ int     PacMan::get_score()
  */
 void    PacMan::print_score()
 {
+
     text->setDefaultTextColor(0x00ffffff);
     text->setFont(QFont("times", 15));
-    text->setPlainText("Puntuacion " + QString::number(score) + "\t\tVidas: " + QString::number(vidas));
+    text->setPlainText("Puntuacion " + QString::number(score) + "\t\tVidas: " + QString::number(vidas)+ "\t\tNivel: " + QString::number(contador));
     text->setPos(10 , HEIGHT - 30);
 }
 /**
@@ -85,7 +101,7 @@ void    PacMan::print_score()
  */
 void    PacMan::incr_score()
 {
-    score += 100;
+    score += 50;
 }
 /**
  * @brief PacMan::set_lives

@@ -177,3 +177,4 @@ void        Fantasma::find_path()
 {
 
 }
+

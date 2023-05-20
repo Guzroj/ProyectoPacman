@@ -83,6 +83,7 @@ void Matriz::lectorLineas(int *map, std::string le){
 }
 
 void Matriz::corredor(){
+
     timer_pacman = new QTimer();
     timer_naranja = new QTimer();
     timer_rosa = new QTimer();

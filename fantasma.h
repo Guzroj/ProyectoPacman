@@ -38,6 +38,9 @@ public:
     int             check_move(int i_pos, int j_pos);
     virtual void    set_default() = 0;
     virtual void    calculate_point() = 0;
+
+    int             nivel();
+    int             contador = 0;
     Fantasma();
 public slots:
     virtual void    move_f() = 0;

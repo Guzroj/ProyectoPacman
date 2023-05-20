@@ -24,6 +24,12 @@ public:
     void            find_pacman();
     void            set_friends(Rosa *pin, Naranja *cl, Azul *ink);
     void            find_path();
+
+    //parte de prueba back
+    bool            backtracking_active =false;
+    bool            check_solution();
+    void            activate_backtracking();
+    bool            backtrack();
 public slots:
     void            move_f();
 };

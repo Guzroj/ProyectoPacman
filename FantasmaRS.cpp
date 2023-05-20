@@ -67,7 +67,7 @@ Rosa::Rosa(QGraphicsScene *sc, int **map, PacMan *pc) : Fantasma()
     scene->addItem(this);
 }
 
-void        Rosa::find_pacman()
+/*void        Rosa::find_pacman()
 {
     d = 0;
     flag = 0;
@@ -99,7 +99,51 @@ void        Rosa::find_pacman()
     restore_path();
     set_direction();
     clear_map();
+}*/
+void Rosa::find_pacman()
+{
+    d = 0;
+    flag = 0;
+    if (!pacman->scared_state())
+    {
+        this->setPixmap(QPixmap(":/Imagenes/rosa.png"));
+        calculate_point();
+    }
+    else
+    {
+        if (i_pos == 1 && j_pos == size_y - 2)
+            pacman->set_scared();
+        else
+        {
+            this->setPixmap(QPixmap(":/Imagenes/Comer.png"));
+            i_exit = 1;
+            j_exit = size_y - 2;
+        }
+    }
+    map_path[i_pos][j_pos] = d;
+    if (check_intersect())
+        return ;
+
+    // Verificar si el backtracking está activo
+    if (backtracking_active) {
+        if (backtrack()) {
+            // Se encontró una solución, actualizar la posición de Rosa
+            this->setPos(j_pos * 32, i_pos * 32);
+        }
+    } else {
+        find_path();
+        if (set_direction_near())
+        {
+            clear_map();
+            return ;
+        }
+        restore_path();
+        set_direction();
+    }
+
+    clear_map();
 }
+
 
 void        Rosa::set_default()
 {
@@ -171,7 +215,94 @@ void        Rosa::set_friends(Rojo *bl, Naranja *cl, Azul *ink)
     azul = ink;
 }
 
-void    Rosa::move_f()
+bool Rosa::check_solution()
+{
+    return (i_pos == i_exit && j_pos == j_exit);
+}
+
+bool Rosa::backtrack()
+{
+    if (check_solution()) {
+        return true;  // Se encontró la solución
+    }
+
+    // Intentar mover hacia arriba
+    if (check_move(i_pos - 1, j_pos)) {
+        // Guardar la posición actual
+        int prev_i = i_pos;
+        int prev_j = j_pos;
+
+        // Mover hacia arriba
+        i_pos--;
+        if (backtrack()) {
+            return true;  // Se encontró la solución
+        }
+
+        // No se encontró la solución, retroceder
+        i_pos = prev_i;
+        j_pos = prev_j;
+    }
+
+    // Intentar mover hacia abajo
+    if (check_move(i_pos + 1, j_pos)) {
+        // Guardar la posición actual
+        int prev_i = i_pos;
+        int prev_j = j_pos;
+
+        // Mover hacia abajo
+        i_pos++;
+        if (backtrack()) {
+            return true;  // Se encontró la solución
+        }
+
+        // No se encontró la solución, retroceder
+        i_pos = prev_i;
+        j_pos = prev_j;
+    }
+
+    // Intentar mover hacia la izquierda
+    if (check_move(i_pos, j_pos - 1)) {
+        // Guardar la posición actual
+        int prev_i = i_pos;
+        int prev_j = j_pos;
+
+        // Mover hacia la izquierda
+        j_pos--;
+        if (backtrack()) {
+            return true;  // Se encontró la solución
+        }
+
+        // No se encontró la solución, retroceder
+        i_pos = prev_i;
+        j_pos = prev_j;
+    }
+
+    // Intentar mover hacia la derecha
+    if (check_move(i_pos, j_pos + 1)) {
+        // Guardar la posición actual
+        int prev_i = i_pos;
+        int prev_j = j_pos;
+
+        // Mover hacia la derecha
+        j_pos++;
+        if (backtrack()) {
+            return true;  // Se encontró la solución
+        }
+
+        // No se encontró la solución, retroceder
+        i_pos = prev_i;
+        j_pos = prev_j;
+    }
+
+    return false;  // No se encontró ninguna solución desde esta posición
+}
+
+void Rosa::activate_backtracking()
+{
+    backtracking_active = true;
+}
+
+/*void    Rosa::move_f()
 {
     if (pacman->get_point() >= 50)
     {
@@ -200,4 +331,48 @@ void    Rosa::move_f()
         if (check_intersect())
             return ;
     }
+}*/
+
+void Rosa::move_f()
+{
+    if (pacman->get_point() >= 50)
+    {
+        // Verificar la condición para activar el backtracking
+        if (pacman->points == 200) {
+            activate_backtracking();
+    }
+
+    if (backtracking_active) {
+        if (backtrack()) {
+            // Se encontró una solución, actualizar la posición de Rosa
+            this->setPos(j_pos * 32, i_pos * 32);
+        }
+    } else {
+        find_pacman();
+        if (direction == 1)
+        {
+            if (check_move(i_pos - 1, j_pos))
+                i_pos--;
+        }
+        if (direction == 2)
+        {
+            if (check_move(i_pos + 1, j_pos))
+                i_pos++;
+        }
+        if (direction == 3)
+        {
+            if (check_move(i_pos, j_pos - 1))
+                j_pos--;
+        }
+        if (direction == 4)
+        {
+            if (check_move(i_pos, j_pos + 1))
+                j_pos++;
+        }
+        this->setPos(j_pos * 32, i_pos * 32);
+        if (check_intersect())
+            return ;
+    }
 }
+}
+

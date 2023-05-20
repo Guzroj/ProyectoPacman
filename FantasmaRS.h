@@ -23,7 +23,15 @@ public:
     void    find_pacman();
     void    set_friends(Rojo *bl, Naranja *cl, Azul *ink);
     void    find_path();
-    Rosa(QGraphicsScene *sc, int **map, PacMan *pc);
+            Rosa(QGraphicsScene *sc, int **map, PacMan *pc);
+
+   //para hacer el back del fantasma rosado
+   bool     backtracking_active = false;
+   void     activate_backtracking();
+   bool     check_solution();
+   bool     backtrack();
+
+
 public slots:
     void    move_f();
 };

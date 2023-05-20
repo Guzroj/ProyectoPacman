@@ -7,6 +7,7 @@
 #include <QGraphicsPixmapItem>
 #include <unistd.h>
 
+
 class   PacMan : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
@@ -20,12 +21,11 @@ private:
     QGraphicsTextItem*text;
     QGraphicsTextItem*message;
     int vidas;
-    void refrescar();
     int verimove(int i_pos, int j_pos);
     int scared;
     int counter;
     int score;
-    int points;
+    //int points;
 public:
     PacMan(int **map_int, QGraphicsPixmapItem **map_pix, QGraphicsScene *scene);
     void    keyPressEvent(QKeyEvent *event);
@@ -40,6 +40,12 @@ public:
     void    print_score();
     void    set_lives();
     int     get_point();
+    //prueba para que funcione back
+    void refrescar();
+    int points;
+    int nivel();
+    int contador=1;
+
 public slots:
     void    move();
 };
